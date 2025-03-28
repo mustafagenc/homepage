@@ -1,67 +1,73 @@
 import { buttonVariants } from '@/components/ui/button';
 import { Link } from '@/i18n/navigation';
 import { PUBLIC_MAIL } from '@/lib/constants';
-
+import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
-export const metadata: Metadata = {
-  title: 'Privacy Policy',
-  description:
-    'Find out how I collect, use, and protect your personal information to ensure your privacy is respected.',
-  //robots: {
-  //  // If no longer want the crawlers to index this page, but we want them to follow
-  //  // any url on this page.
-  //  // index: false,
-  //  follow: true,
-  //},
-};
+
+type Params = Promise<{ locale: string }>;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Params;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Privacy' });
+
+  const baseMetadata = {
+    title: t('Metadata.title'),
+    description: t('Metadata.description'),
+  };
+
+  return {
+    ...baseMetadata,
+  };
+}
 
 export default function Page() {
+  const t = useTranslations('Privacy');
   return (
     <section>
       <div className="mb-5">
-        <h1 className="title">Privacy Policy</h1>
-        <p className="text-muted-foreground">
-          This Privacy Policy explains how I collect, use, and protect the
-          personal information you provide through the contact form on my
-          website.
-        </p>
+        <h1 className="title">{t('title')}</h1>
+        <p className="text-muted-foreground">{t('description')}</p>
       </div>
 
       <div className="mb-8 space-y-5">
         <div>
-          <h2 className="text-xl font-bold">Information I Collect</h2>
+          <h2 className="text-xl font-bold">{t('information-i-collect')}</h2>
           <p className="text-muted-foreground">
-            When you fill out the contact form, I may collect your name, email
-            address, and any other details you provide.
+            {t('information-i-collect-description')}
           </p>
         </div>
         <div>
-          <h2 className="text-xl font-bold">How I Use Your Information</h2>
+          <h2 className="text-xl font-bold">{t('how-i-use-information')}</h2>
           <p className="text-muted-foreground">
-            I use the information you submit to respond to your inquiries and
-            communicate with you as necessary.
+            {t('how-i-use-information-description')}
           </p>
         </div>
         <div>
-          <h2 className="text-xl font-bold">Data Sharing and Protection</h2>
+          <h2 className="text-xl font-bold">
+            {t('data-sharing-and-protection')}
+          </h2>
           <p className="text-muted-foreground">
-            I take reasonable measures to protect your personal data from
-            unauthorized access, alteration, or disclosure. I utilize secure
-            servers to store your data.
+            {t('data-sharing-and-protection-description')}
           </p>
         </div>
         <div>
-          <h2 className="text-xl font-bold">Contact Details</h2>
+          <h2 className="text-xl font-bold">{t('contact-details')}</h2>
           <p className="text-muted-foreground">
-            If you have any questions or concerns about the privacy policy,
-            please contact us at this email address:{' '}
-            <a
-              href={`mailto:${PUBLIC_MAIL}`}
-              className="text-muted-foreground hover:text-foreground font-medium underline underline-offset-4 hover:transition"
-            >
-              {PUBLIC_MAIL}
-            </a>{' '}
-            or through the contact form.
+            {t.rich('contact-details-description', {
+              email: () => (
+                <Link
+                  href={`mailto:${PUBLIC_MAIL}`}
+                  className="text-muted-foreground hover:text-foreground font-medium underline underline-offset-4 hover:transition"
+                >
+                  {PUBLIC_MAIL}
+                </Link>
+              ),
+            })}
           </p>
         </div>
       </div>
@@ -72,7 +78,7 @@ export default function Page() {
           variant: 'secondary',
         })}
       >
-        Contact me
+        {t('contact-me')}
       </Link>
     </section>
   );

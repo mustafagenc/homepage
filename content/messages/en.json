@@ -104,5 +104,24 @@
       "description": "Interested to chat on your ideas or work with me? Schedule a meeting using the form below."
     },
     "title": "Schedule a Meet"
+  },
+  "Privacy": {
+    "Metadata": {
+      "title": "Privacy Policy",
+      "description": "This Privacy Policy explains how I collect, use, and protect your personal information to ensure your privacy is respected."
+    },
+    "title": "Privacy Policy",
+    "description": "This Privacy Policy explains how I collect, use, and protect the personal information you provide through the contact form on my website.",
+    "information-i-collect": "Information I Collect",
+    "information-i-collect-description": "When you fill out the contact form, I may collect your name, email address, and any other details you provide.",
+    "how-i-use-information": "How I Use Information",
+    "how-i-use-information-description": "I use the information you submit to respond to your inquiries and communicate with you as necessary.",
+    "how-i-protect-information": "How I Protect Information",
+    "how-i-protect-information-description": "I take reasonable measures to protect your personal data from unauthorized access, alteration, or disclosure. I utilize secure servers to store your data.",
+    "data-sharing-and-protection": "Data Sharing and Protection",
+    "data-sharing-and-protection-description": "I take reasonable measures to protect your personal data from unauthorized access, alteration, or disclosure. I utilize secure servers to store your data.",
+    "contact-details": "Contact Details",
+    "contact-details-description": "If you have any questions or concerns about this Privacy Policy, please contact me at <email></email>.",
+    "contact-me": "Contact me"
   }
 }

@@ -93,5 +93,24 @@
       "description": "Fikirlerinizi paylaşmak veya benimle çalışmak ister misiniz? Aşağıdaki formu doldurarak bir toplantı planlayabilirsiniz."
     },
     "title": "Toplantı Planla"
+  },
+  "Privacy": {
+    "Metadata": {
+      "title": "Gizlilik Politikası",
+      "description": "Bu Gizlilik Politikası, benimle iletişime geçtiğinizde kişisel bilgilerinizi nasıl topladığımı, nasıl kullandığımı ve koruduğumu açıklar."
+    },
+    "title": "Gizlilik Politikası",
+    "description": "Bu Gizlilik Politikası, benimle iletişime geçtiğinizde kişisel bilgilerinizi nasıl topladığımı, nasıl kullandığımı ve koruduğumu açıklar.",
+    "information-i-collect": "Kişisel Bilgileri Toplamak",
+    "information-i-collect-description": "İletişim formunu doldurduğunuzda, adınızı, e-posta adresinizi ve size sağladığınız herhangi bir diğer bilgiyi toplayabilirim.",
+    "how-i-use-information": "Kişisel Bilgileri Kullanmak",
+    "how-i-use-information-description": "Gönderdiğiniz bilgileri size yanıt vereceğim ve gerektiğinde iletişime geçeceğim.",
+    "how-i-protect-information": "Kişisel Bilgileri Koruma",
+    "how-i-protect-information-description": "Kişisel bilgilerinize yetkisiz erişim, değiştirme veya sızıntıdan koruma sağlamak için uygun önlemler alırım. Verilerimi güvenli sunuculara kaydederim.",
+    "data-sharing-and-protection": "Veri Paylaşımı ve Koruma",
+    "data-sharing-and-protection-description": "Kişisel bilgilerinize yetkisiz erişim, değiştirme veya sızıntıdan koruma sağlamak için uygun önlemler alırım. Verilerimi güvenli sunuculara kaydederim.",
+    "contact-details": "İletişim Bilgileri",
+    "contact-details-description": "Bu Gizlilik Politikası hakkında herhangi bir sorunuz varsa, lütfen <email></email> adresine ulaşın.",
+    "contact-me": "Benimle iletişime geçin"
   }
 }
