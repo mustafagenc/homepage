@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { highlight } from 'sugar-high';
-import { JSX } from 'react';
-import { MDXRemote, MDXRemoteProps } from 'next-mdx-remote/rsc';
+import ReactMarkdown from 'react-markdown';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function Code({ children, ...props }: any) {
@@ -49,31 +48,58 @@ function CustomImage({ ...props }: any) {
 
   // Don't render badges.
   if (imageSrc.includes('img.shields.io')) return null;
+
   return (
-    <Image
-      width={700}
-      height={400}
-      unoptimized={imageSrc.toLowerCase().endsWith('.gif')}
-      alt={props.alt ?? 'Image from MDX'}
-      className="mx-auto rounded-md"
-      {...props}
-    />
+    <div className="my-2 flex justify-center">
+      <Image
+        {...props}
+        alt={props.alt || 'Image'}
+        width={750}
+        height={380}
+        className="rounded-md object-cover"
+        priority
+      />
+    </div>
   );
 }
 
-const components = {
-  code: Code,
-  img: CustomImage,
-  a: CustomLink,
-};
+interface MDXContentProps {
+  source: string;
+  projectName?: string;
+}
 
-export default function MDXContent(
-  props: JSX.IntrinsicAttributes & MDXRemoteProps & { projectName?: string }
-) {
+export default function MDXContent({ source, projectName }: MDXContentProps) {
   return (
-    <MDXRemote
-      {...props}
-      components={{ ...components, ...(props.components || {}) }}
-    />
+    <ReactMarkdown
+      components={{
+        code: Code,
+        a: (props) => <CustomLink projectName={projectName} {...props} />,
+        img: CustomImage,
+        p: ({ children }) => <p className="mb-4">{children}</p>,
+        h1: ({ children }) => (
+          <h1 className="mt-8 mb-4 text-2xl font-bold">{children}</h1>
+        ),
+        h2: ({ children }) => (
+          <h2 className="mt-8 mb-4 text-xl font-bold">{children}</h2>
+        ),
+        h3: ({ children }) => (
+          <h3 className="mt-8 mb-4 text-lg font-bold">{children}</h3>
+        ),
+        ul: ({ children }) => (
+          <ul className="mb-4 list-disc pl-6">{children}</ul>
+        ),
+        ol: ({ children }) => (
+          <ol className="mb-4 list-decimal pl-6">{children}</ol>
+        ),
+        li: ({ children }) => <li className="mb-2">{children}</li>,
+        blockquote: ({ children }) => (
+          <blockquote className="mb-4 border-l-4 border-gray-300 pl-4 italic">
+            {children}
+          </blockquote>
+        ),
+      }}
+    >
+      {source}
+    </ReactMarkdown>
   );
 }

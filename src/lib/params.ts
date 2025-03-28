@@ -7,19 +7,20 @@ export interface ParsedQueryParams {
 }
 
 interface ParseQueryParamsOptions {
-  searchParams?: { [key: string]: string | string[] | undefined };
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
   defaultPageIndex?: number;
   defaultPerPage: number;
   endpoint: 'blogs' | 'projects';
 }
 
-export function parseQueryParams({
+export async function parseQueryParams({
   searchParams,
   defaultPageIndex = PAGE_INDEX_DEFAULT,
   defaultPerPage,
-}: ParseQueryParamsOptions): ParsedQueryParams {
-  const pageQueryRaw = searchParams?.page;
-  const perPageQueryRaw = searchParams?.perPage;
+}: ParseQueryParamsOptions): Promise<ParsedQueryParams> {
+  const params = await searchParams;
+  const pageQueryRaw = params?.page;
+  const perPageQueryRaw = params?.perPage;
 
   const pageQuery =
     typeof pageQueryRaw === 'string' && !isNaN(Number(pageQueryRaw))
@@ -32,7 +33,7 @@ export function parseQueryParams({
       : defaultPerPage;
 
   const searchQuery =
-    typeof searchParams?.q === 'string' ? searchParams.q.trim() : undefined;
+    typeof params?.q === 'string' ? params.q.trim() : undefined;
 
   return {
     pageQuery,

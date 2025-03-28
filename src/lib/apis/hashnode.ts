@@ -57,7 +57,33 @@ const QUERIES = {
       publication(host: $publicationHost) {
         post(slug: $slug) {
           id
+          title
+          slug
         }
+      }
+    }
+  `,
+  GET_POST_BY_SLUG_ALT: gql`
+    query getPostBySlug($username: String!) {
+      user(username: $username) {
+        posts(pageSize: 10, page: 1, sortBy: DATE_PUBLISHED_DESC) {
+          edges {
+            node {
+              id
+              title
+              slug
+            }
+          }
+        }
+      }
+    }
+  `,
+  GET_POST_BY_SLUG_DIRECT: gql`
+    query getPostBySlug($slug: String!) {
+      post(slug: $slug) {
+        id
+        title
+        slug
       }
     }
   `,
@@ -187,28 +213,66 @@ export async function getBlogPostByID(
 export async function getBlogPostIDBySlug(
   slug: string
 ): Promise<{ id: string } | null> {
-  const publicationHosts = [
-    env.NEXT_PUBLIC_HASHNODE_PUBLICATION_HOST,
-    ...(env.NEXT_PUBLIC_HASHNODE_ADDITIONAL_PUBLICATION_HOSTS.split(',') || []),
-  ].filter(Boolean);
+  const publicationHost = env.NEXT_PUBLIC_HASHNODE_PUBLICATION_HOST;
+  const username = HASHNODE_USERNAME;
 
-  for (const publicationHost of publicationHosts) {
-    try {
-      const response = await executeGraphQLRequest<IBlogPostIDBySlugResponse>(
-        QUERIES.GET_POST_BY_SLUG,
-        { publicationHost, slug },
-        'Failed to fetch blog post ID'
-      );
+  console.log('Publication Host:', publicationHost);
+  console.log('Username:', username);
+  console.log('Slug:', slug);
 
-      if (response.publication?.post?.id) {
-        return { id: response.publication.post.id };
-      }
-    } catch (error) {
-      console.error(
-        `Error querying publication host: ${publicationHost} for slug: ${slug}`,
-        error
-      );
+  try {
+    // İlk yöntemi dene
+    console.log('Trying first method with publication host...');
+    const response = await executeGraphQLRequest<IBlogPostIDBySlugResponse>(
+      QUERIES.GET_POST_BY_SLUG,
+      { publicationHost, slug },
+      'Failed to fetch blog post ID'
+    );
+
+    console.log('First method response:', JSON.stringify(response, null, 2));
+
+    if (response.publication?.post?.id) {
+      return { id: response.publication.post.id };
     }
+
+    // İkinci yöntemi dene
+    console.log('Trying second method with username...');
+    const altResponse = await executeGraphQLRequest<IBlogPostIDBySlugResponse>(
+      QUERIES.GET_POST_BY_SLUG_ALT,
+      { username },
+      'Failed to fetch blog post ID with username'
+    );
+
+    console.log(
+      'Second method response:',
+      JSON.stringify(altResponse, null, 2)
+    );
+
+    const posts = altResponse.user?.posts?.edges ?? [];
+    const post = posts.find((p) => p.node?.slug === slug)?.node;
+    if (post?.id) {
+      return { id: post.id };
+    }
+
+    // Üçüncü yöntemi dene
+    console.log('Trying third method with direct slug...');
+    const directResponse =
+      await executeGraphQLRequest<IBlogPostIDBySlugResponse>(
+        QUERIES.GET_POST_BY_SLUG_DIRECT,
+        { slug },
+        'Failed to fetch blog post ID with direct slug'
+      );
+
+    console.log(
+      'Third method response:',
+      JSON.stringify(directResponse, null, 2)
+    );
+
+    if (directResponse.post?.id) {
+      return { id: directResponse.post.id };
+    }
+  } catch (error) {
+    console.error(`Error querying for slug: ${slug}`, error);
   }
 
   return null;

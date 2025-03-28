@@ -69,7 +69,25 @@ export type IBlogPostIDBySlugResponse = {
   publication?: {
     post?: {
       id: string;
+      title?: string;
+      slug?: string;
     };
+  };
+  user?: {
+    posts?: {
+      edges?: {
+        node?: {
+          id: string;
+          title?: string;
+          slug?: string;
+        };
+      }[];
+    };
+  };
+  post?: {
+    id: string;
+    title?: string;
+    slug?: string;
   };
 };
 

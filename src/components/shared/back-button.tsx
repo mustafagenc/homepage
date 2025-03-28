@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { buttonVariants } from '@/components/ui/button';
 import { ArrowLeftIcon } from '@/components/icons/arrowLeft';
 import { useSearchParams } from 'next/navigation';
@@ -9,6 +8,7 @@ import {
   PER_PAGE_QUERY_PARAM,
   SEARCH_QUERY_PARAM,
 } from '@/lib/constants';
+import { Link } from '@/i18n/navigation';
 
 interface BackButtonProps {
   endpoint: 'projects' | 'blogs';
