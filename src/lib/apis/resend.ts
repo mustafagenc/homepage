@@ -5,10 +5,7 @@ import { z } from 'zod';
 import { ContactFormEmailTemplate } from '@/components/contact/contact-email-template';
 import { PUBLIC_MAIL } from '@/lib/constants';
 import { env } from '@/lib/env';
-import {
-  ContactFormSchema,
-  TContactFormSchema,
-} from '@/lib/validators/contact-form';
+import { TContactFormSchema } from '@/lib/validators/contact-form';
 import { TNewsletterFormSchema } from '@/lib/validators/newsletter-form';
 
 const resend = new Resend(env.RESEND_API_KEY);
