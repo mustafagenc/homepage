@@ -1,5 +1,6 @@
 'use server';
 import { CreateContactResponse, Resend } from 'resend';
+import { z } from 'zod';
 
 import { ContactFormEmailTemplate } from '@/components/contact/contact-email-template';
 import { PUBLIC_MAIL } from '@/lib/constants';
@@ -46,7 +47,15 @@ async function sendEmailResend(data: TContactFormSchema) {
 export async function sendEmail(
   data: TContactFormSchema
 ): Promise<TSendEmailResponse> {
-  const validatedResponse = ContactFormSchema().safeParse(data);
+  // Since we're in a server component, we can't use useTranslations hook
+  // Instead, we'll use a simple validation without translations
+  const schema = z.object({
+    name: z.string().min(1).min(2),
+    email: z.string().min(1).email(),
+    message: z.string().min(1),
+  });
+
+  const validatedResponse = schema.safeParse(data);
   if (!validatedResponse.success) {
     const errorMessage = JSON.stringify(validatedResponse.error.format());
     return { error: { message: errorMessage }, success: false };

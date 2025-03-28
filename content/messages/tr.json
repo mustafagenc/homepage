@@ -1,18 +1,7 @@
 {
   "Shared": {
     "loading": "Yükleniyor...",
-    "notPlaying": "Oynatılmıyor",
-    "name": "Ad",
-    "enter-your-name": "Adınızı girin...",
-    "email": "E-posta",
-    "enter-your-email": "E-posta girin...",
-    "message": "Mesaj",
-    "enter-your-message": "Mesaj girin...",
-    "nameIsrRequired": "Ad gereklidir.",
-    "emailIsRequired": "E-posta gereklidir.",
-    "emailIsInvalid": "E-posta geçersiz.",
-    "messageIsRequired": "Mesaj gereklidir.",
-    "mustBeAtLeast2": "En az 2 karakter olmalıdır."
+    "notPlaying": "Oynatılmıyor"
   },
   "Navbar": {
     "home": "Anasayfa",
@@ -27,14 +16,6 @@
   },
   "Footer": {
     "copyright": "\u00A9 {date} Mustafa Genç"
-  },
-  "Newsletter": {
-    "title": "Bültenime abone olun",
-    "subtitle": "En yeni projeleri ve blog güncellemelerini gelen kutunuza alın.",
-    "email": "E-posta",
-    "button": "Abone Ol",
-    "placeholder": "E-posta adresinizi girin...",
-    "privacy": "<PrivacyPolicy>Gizlilik politikası</PrivacyPolicy>"
   },
   "Home": {
     "Metadata": {
@@ -81,7 +62,30 @@
     "contact-me": "Gönder",
     "schedule-meeting": "Fikirlerinizi paylaşmak veya benimle çalışmak ister misiniz? Aşağıdaki butonu kullanarak bir toplantı planlayabilirsiniz.",
     "book-a-meet": "Toplantı planlayın",
-    "privacy": "Bu formu göndererek <PrivacyPolicy>gizlilik politikasını</PrivacyPolicy> kabul ettiğimi beyan ediyorum."
+    "privacy": "Bu formu göndererek <PrivacyPolicy>gizlilik politikasını</PrivacyPolicy> kabul ettiğimi beyan ediyorum.",
+    "name": "Ad",
+    "enter-your-name": "Adınızı girin...",
+    "email": "E-posta",
+    "enter-your-email": "E-posta girin...",
+    "message": "Mesaj",
+    "enter-your-message": "Mesaj girin...",
+    "name-is-required": "Ad gereklidir.",
+    "must-be-at-least-2": "En az 2 karakter olmalıdır.",
+    "email-is-required": "E-posta gereklidir.",
+    "email-is-invalid": "E-posta geçersiz.",
+    "message-is-required": "Mesaj gereklidir.",
+    "Newsletter": {
+      "title": "Bültenime abone olun",
+      "subtitle": "En yeni projeleri ve blog güncellemelerini gelen kutunuza alın.",
+      "email": "E-posta",
+      "button": "Abone Ol",
+      "placeholder": "E-posta adresinizi girin...",
+      "privacy": "<PrivacyPolicy>Gizlilik politikası</PrivacyPolicy>",
+      "error-saving-contact-to-resend": "Resend'e kişi kaydedilirken hata oluştu:",
+      "make-sure-to-check-your-spam-folder": "Lütfen spam klasörünüzü kontrol edin.",
+      "something-went-wrong": "Bir şeyler yanlış gitti!",
+      "you-might-already-be-subscribed": "Zaten abone olmuş olabilirsiniz."
+    }
   },
   "meet": {
     "Metadata": {

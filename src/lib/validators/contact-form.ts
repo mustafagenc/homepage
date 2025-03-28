@@ -1,18 +1,16 @@
-import { useTranslations } from 'next-intl';
 import { z } from 'zod';
 
-export const ContactFormSchema = () => {
-  const t = useTranslations('Shared');
+export const ContactFormSchema = (t: (key: string) => string) => {
   return z.object({
     name: z
       .string()
-      .min(1, { message: t('nameIsrRequired') })
-      .min(2, { message: t('mustBeAtLeast2') }),
+      .min(1, { message: t('name-is-required') })
+      .min(2, { message: t('must-be-at-least-2') }),
     email: z
       .string()
-      .min(1, { message: t('emailIsRequired') })
-      .email(t('emailIsInvalid')),
-    message: z.string().min(1, { message: t('messageIsRequired') }),
+      .min(1, { message: t('email-is-required') })
+      .email(t('email-is-invalid')),
+    message: z.string().min(1, { message: t('message-is-required') }),
   });
 };
 

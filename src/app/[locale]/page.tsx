@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 
 import { Intro } from '@/components/home/intro';
-import { NewsletterForm } from '@/components/shared/newsletter-form';
+import { NewsletterForm } from '@/components/contact/newsletter-form';
 import { Socials } from '@/components/shared/socials';
 import { BASE_URL } from '@/lib/constants';
 

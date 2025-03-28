@@ -28,14 +28,6 @@
   "Footer": {
     "copyright": "\u00A9 {date} Mustafa Genç"
   },
-  "Newsletter": {
-    "title": "Subscribe to my newsletter",
-    "subtitle": "Get recent projects \u0026 blog updates to your inbox.",
-    "email": "E-mail",
-    "button": "Subscribe",
-    "placeholder": "Enter your email...",
-    "privacy": "<PrivacyPolicy>Privacy policy</PrivacyPolicy>"
-  },
   "Home": {
     "Metadata": {
       "title": "Mustafa Genç",
@@ -81,7 +73,30 @@
     "contact-me": "Contact me",
     "schedule-meeting": "Interested to chat on your ideas or work with me? Schedule a meeting using the button below.",
     "book-a-meet": "Schedule a meeting",
-    "privacy": "By submitting this form, I agree to the <PrivacyPolicy>privacy policy</PrivacyPolicy>."
+    "privacy": "By submitting this form, I agree to the <PrivacyPolicy>privacy policy</PrivacyPolicy>.",
+    "name": "Ad",
+    "enter-your-name": "Adınızı girin...",
+    "email": "E-posta",
+    "enter-your-email": "E-posta girin...",
+    "message": "Mesaj",
+    "enter-your-message": "Mesaj girin...",
+    "name-is-required": "Name is required.",
+    "must-be-at-least-2": "Must be at least 2 characters.",
+    "email-is-required": "Email is required.",
+    "email-is-invalid": "Email is invalid.",
+    "message-is-required": "Message is required.",
+    "Newsletter": {
+      "title": "Subscribe to my newsletter",
+      "subtitle": "Get recent projects \u0026 blog updates to your inbox.",
+      "email": "E-mail",
+      "button": "Subscribe",
+      "placeholder": "Enter your email...",
+      "privacy": "<PrivacyPolicy>Privacy policy</PrivacyPolicy>",
+      "error-saving-contact-to-resend": "Error saving contact to Resend:",
+      "make-sure-to-check-your-spam-folder": "Make sure to check your spam folder.",
+      "something-went-wrong": "Something went wrong!",
+      "you-might-already-be-subscribed": "You might already be subscribed."
+    }
   },
   "Meet": {
     "Metadata": {

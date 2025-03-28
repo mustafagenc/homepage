@@ -25,8 +25,10 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Link } from '@/i18n/navigation';
 
 export const Contact = () => {
+  const t = useTranslations('Contact');
+
   const form = useForm<TContactFormSchema>({
-    resolver: zodResolver(ContactFormSchema()),
+    resolver: zodResolver(ContactFormSchema(t)),
     defaultValues: {
       name: '',
       email: '',
@@ -42,8 +44,6 @@ export const Contact = () => {
     toast.success('Message sent successfully!');
     form.reset();
   };
-
-  const t = useTranslations();
 
   return (
     <section className="flex flex-col gap-8">
@@ -61,13 +61,13 @@ export const Contact = () => {
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel className="text-xs font-bold uppercase text-zinc-700 dark:text-zinc-400">
-                      {t('Shared.name')}
+                      {t('name')}
                     </FormLabel>
                     <FormControl>
                       <Input
                         id="name"
                         autoFocus
-                        placeholder={t('Shared.enter-your-name')}
+                        placeholder={t('enter-your-name')}
                         {...field}
                       />
                     </FormControl>
@@ -84,12 +84,12 @@ export const Contact = () => {
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel className="text-xs font-bold uppercase text-zinc-700 dark:text-zinc-400">
-                      {t('Shared.email')}
+                      {t('email')}
                     </FormLabel>
                     <FormControl>
                       <Input
                         id="email"
-                        placeholder={t('Shared.enter-your-email')}
+                        placeholder={t('enter-your-email')}
                         {...field}
                       />
                     </FormControl>
@@ -106,13 +106,13 @@ export const Contact = () => {
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel className="text-xs font-bold uppercase text-zinc-700 dark:text-zinc-400">
-                      {t('Shared.message')}
+                      {t('message')}
                     </FormLabel>
                     <FormControl>
                       <Textarea
                         rows={8}
                         id="message"
-                        placeholder={t('Shared.enter-your-message')}
+                        placeholder={t('enter-your-message')}
                         className="max-h-72"
                         {...field}
                       />
@@ -132,11 +132,11 @@ export const Contact = () => {
               {form.formState.isSubmitting ? (
                 <Loader className="mr-2 size-5 animate-spin" />
               ) : null}
-              {t('Contact.contact-me')}
+              {t('contact-me')}
             </Button>
           </div>
           <p className="mt-4 text-xs text-muted-foreground">
-            {t.rich('Contact.privacy', {
+            {t.rich('privacy', {
               PrivacyPolicy: (chunks) => (
                 <Link
                   href="/privacy"
