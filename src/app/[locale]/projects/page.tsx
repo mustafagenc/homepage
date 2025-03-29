@@ -45,7 +45,7 @@ export default async function Page({
 }: {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
-  const t = await getTranslations();
+  const t = await getTranslations('Projects');
 
   const { perPageQuery, pageQuery, searchQuery } = await parseQueryParams({
     searchParams,
@@ -101,25 +101,6 @@ export default async function Page({
   return (
     <section>
       <h1 className="title">{t('title')}</h1>
-      <Alert className="mb-4">
-        <AlertIcon className="size-5" />
-        <AlertTitle className="text-sm font-semibold uppercase">
-          Heads up!
-        </AlertTitle>
-        <AlertDescription className="text-sm text-muted-foreground">
-          It does not list all of my projects. To view them all, check out my{' '}
-          <a
-            href="https://github.com/mustafagenc"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="font-semibold text-muted-foreground underline underline-offset-4 hover:text-foreground hover:transition"
-          >
-            GitHub
-          </a>{' '}
-          profile.
-        </AlertDescription>
-      </Alert>
-
       <Suspense
         fallback={
           <Input
