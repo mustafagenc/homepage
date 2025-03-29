@@ -141,11 +141,12 @@
   },
   "RSS": {
     "title": "Mustafa Genç",
-    "description": "Stay updated with the latest selected public GitHub repositories and blog posts from Mustafa Genç.",
+    "description": "Mustafa Genç'in en son seçilmiş halka açık GitHub depoları ve blog gönderileriyle güncel kalın.",
+    "author": "{email} (Mustafa Genç)",
     "copyright": "\u00A9 {date} Mustafa Genç",
-    "generator": "RSS Feed for Node and Next.js",
-    "blogby": "{title} blog by Mustafa Genç",
-    "projectby": "{title} project by Mustafa Genç",
+    "generator": "Node ve Next.js için RSS Beslemesi",
+    "blogby": "{title} başlıklı blog yazısı Mustafa Genç tarafından yazıldı.",
+    "projectby": "{title} projesi Mustafa Genç tarafından geliştirildi",
     "blog": "Blogs",
     "project": "Projects"
   }

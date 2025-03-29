@@ -142,6 +142,7 @@
   "RSS": {
     "title": "Mustafa Genc",
     "description": "Stay updated with the latest selected public GitHub repositories and blog posts from Mustafa Genc.",
+    "author": "{email} (Mustafa Genc)",
     "copyright": "\u00A9 {date} Mustafa Genc",
     "generator": "RSS Feed for Node and Next.js",
     "blogby": "{title} blog by Mustafa Genc",
