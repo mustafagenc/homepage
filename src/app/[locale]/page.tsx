@@ -7,10 +7,13 @@ import {
   BASE_URL,
   PAGE_INDEX_DEFAULT,
   RECENT_BLOGS_DEFAULT,
+  RECENT_PROJECTS_DEFAULT,
 } from '@/lib/constants';
 
 import { getBlogPostsCardMeta } from '@/lib/apis/hashnode';
 import RecentBlogs from '@/components/blogs/recent-blogs';
+import { getProjectsMetadata } from '@/lib/projects';
+import RecentProjects from '@/components/projects/recent-projects';
 
 type Params = Promise<{ locale: string }>;
 
@@ -42,11 +45,17 @@ export default async function Page() {
     pageSize: RECENT_BLOGS_DEFAULT,
   });
 
+  const projects = getProjectsMetadata({
+    page: PAGE_INDEX_DEFAULT,
+    perPage: RECENT_PROJECTS_DEFAULT,
+  });
+
   return (
     <>
       <Intro />
       <Socials />
       <RecentBlogs blogPosts={blogs} />
+      <RecentProjects projectsMeta={projects} />
       <NewsletterForm />
     </>
   );

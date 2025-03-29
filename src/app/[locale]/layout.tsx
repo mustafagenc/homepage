@@ -71,7 +71,7 @@ export default async function RootLayout({
         <NextIntlClientProvider>
           <Providers>
             <Navbar />
-            <div className="px-3 max-w-3xl mx-auto antialiased">
+            <div className="px-3 w-3xl max-w-3xl grow mx-auto antialiased">
               <main className="mt-40 grow">{children}</main>
               <Toaster />
               <Footer />
