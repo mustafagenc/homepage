@@ -12,6 +12,7 @@ import {
   PAGE_QUERY_PARAM,
   SEARCH_QUERY_PARAM,
 } from '@/lib/constants';
+import { useTranslations } from 'next-intl';
 
 interface SearchProps {
   endpoint: 'projects' | 'blogs';
@@ -28,6 +29,8 @@ export const Search = ({
 }: SearchProps) => {
   const router = useRouter();
   const searchParams = useSearchParams();
+
+  const t = useTranslations('Shared');
 
   const [filterText, setFilterText] = useState<string>(query ?? '');
 
@@ -74,7 +77,7 @@ export const Search = ({
           onClick={resetFilter}
           className="h-8 px-2 text-zinc-700 dark:text-zinc-400 lg:px-3"
         >
-          Reset
+          {t('reset-filters')}
           <CrossIcon className="size-5" />
         </Button>
       ) : null}

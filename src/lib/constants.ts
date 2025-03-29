@@ -99,6 +99,16 @@ export const socialMediaLinks = [
       },
     ],
   },
+  // {
+  //   name: 'projects',
+  //   items: [
+  //     {
+  //       name: 'Namaz Vakti',
+  //       href: 'https://namazvakti.app',
+  //       icon: MoonIcon,
+  //     },
+  //   ],
+  // },
 ];
 
 export const footerLinks = [

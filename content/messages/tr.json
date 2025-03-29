@@ -6,14 +6,14 @@
     "previous": "Önceki",
     "next": "Sonraki",
     "apply": "Uygula",
-    "reset-filters": "Filtreleri sıfırla",
+    "reset-filters": "Temizle",
     "per-page": "Sayfa başına",
     "page": "Sayfa",
     "filter": "Filtre"
   },
   "Navbar": {
     "home": "Anasayfa",
-    "blogs": "Yazılar",
+    "blogs": "Blog",
     "projects": "Projeler",
     "work": "İş Deneyimi",
     "contact": "İletişim"
@@ -34,6 +34,7 @@
     "title": "Full-Stack Developer.",
     "description": "20 yılı aşkın süredir yazılım geliştirme alanında çalışıyorum. .NET ve web teknolojilerinde uzmanım ve farklı sektörlerdeki <Work>çeşitli projelerde</Work> başarıyla görev aldım. Şu anda <enkacard>ENKA İnşaat ve Sanayi A.Ş.</enkacard> bünyesinde Kıdemli Yazılım Geliştirici olarak çalışıyor ve <egemcard>EGEM</egemcard> projesinin geliştirilmesinden sorumluyum.<br></br>",
     "social-media": "Sosyal Medya",
+    "projects": "Projeler",
     "egem": "EGEM, inşaat sektöründe makine ve ekipman parklarının yönetimini dijitalleştiren kapsamlı bir platformdur. Ekipman takibi, bakım planlaması, arıza yönetimi, yakıt tüketimi izleme, maliyet analizi ve raporlama gibi kritik süreçleri tek bir çatı altında toplayarak operasyonel verimliliği ve iş güvenliğini artırmayı hedefler.",
     "egem-date": "Haziran 2019'da dahil oldum",
     "enka": "ENKA, 1957'de kurulan, uluslararası inşaat ve sanayi devidir. Enerji, gayrimenkul ve üretim alanlarında da faaliyet gösterir. Türkiye ve dünyada büyük projelere imza atmıştır.",
@@ -41,11 +42,11 @@
   },
   "Blogs": {
     "Metadata": {
-      "title": "Yazılar",
+      "title": "Blog",
       "description": "Kodlama, DevOps, bulut ve daha fazlası hakkında fikirlerimi paylaştığım yazılarımı keşfedin."
     },
-    "title": "Yazılar",
-    "back-to-blogs": "Yazılar'a dön",
+    "title": "Blog",
+    "back-to-blogs": "Blog'a dön",
     "no-results-found": "Sonuç bulunamadı",
     "recent-blogs": "Son Yazılar",
     "all-blogs": "Tüm Yazılar",
