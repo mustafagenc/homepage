@@ -31,6 +31,7 @@ import {
 } from '@/lib/constants';
 import { useState } from 'react';
 import { FilterIcon } from '@/components/icons/filter';
+import { useTranslations } from 'next-intl';
 
 interface FilterDropdownProps {
   endpoint: 'blogs' | 'projects';
@@ -43,6 +44,8 @@ export const FilterDropdown = ({
 }: FilterDropdownProps) => {
   const router = useRouter();
   const searchParams = useSearchParams();
+
+  const t = useTranslations('Shared');
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -93,7 +96,7 @@ export const FilterDropdown = ({
             variant="outline"
             className="flex items-center gap-1 text-zinc-700 dark:text-zinc-400"
           >
-            Filter
+            {t('filter')}
             <FilterIcon className="size-4" />
           </Button>
         </PopoverTrigger>
@@ -112,7 +115,7 @@ export const FilterDropdown = ({
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel className="text-xs font-bold uppercase text-zinc-700 dark:text-zinc-400">
-                      Per Page
+                      {t('per-page')}
                     </FormLabel>
                     <FormControl>
                       <Input
@@ -132,7 +135,7 @@ export const FilterDropdown = ({
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel className="text-xs font-bold uppercase text-zinc-700 dark:text-zinc-400">
-                      Page
+                      {t('page')}
                     </FormLabel>
                     <FormControl>
                       <Input type="number" min={1} max={PAGE_MAX} {...field} />
@@ -146,7 +149,7 @@ export const FilterDropdown = ({
                 className="w-full disabled:opacity-50"
                 disabled={isFormDisabled}
               >
-                Apply
+                {t('apply')}
               </Button>
             </form>
           </Form>
@@ -159,7 +162,7 @@ export const FilterDropdown = ({
           className="text-zinc-700 dark:text-zinc-400"
           onClick={() => router.push(`/${endpoint}`)}
         >
-          Reset Filters
+          {t('reset-filters')}
         </Button>
       )}
     </div>

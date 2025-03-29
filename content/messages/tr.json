@@ -1,11 +1,19 @@
 {
   "Shared": {
     "loading": "Yükleniyor...",
-    "notPlaying": "Oynatılmıyor"
+    "notPlaying": "Oynatılmıyor",
+    "back-to": "{endpoint} sayfasına geri dön",
+    "previous": "Önceki",
+    "next": "Sonraki",
+    "apply": "Uygula",
+    "reset-filters": "Filtreleri sıfırla",
+    "per-page": "Sayfa başına",
+    "page": "Sayfa",
+    "filter": "Filtre"
   },
   "Navbar": {
     "home": "Anasayfa",
-    "blogs": "Blog",
+    "blogs": "Yazılar",
     "projects": "Projeler",
     "work": "İş Deneyimi",
     "contact": "İletişim"
@@ -20,7 +28,7 @@
   "Home": {
     "Metadata": {
       "title": "Mustafa Genç",
-      "description": "GitHub projelerimi inceleyebilir, blog yazılarımı okuyabilir ve projelerim ile blog güncellemelerimden haberdar olmak için bültenime abone olabilirsiniz."
+      "description": "GitHub projelerimi inceleyebilir, yazılarımı okuyabilir ve projelerim ile yazılarımdan haberdar olmak için bültenime abone olabilirsiniz."
     },
     "hey": "Merhaba, Ben Mustafa",
     "title": "Full-Stack Developer.",
@@ -33,10 +41,18 @@
   },
   "Blogs": {
     "Metadata": {
-      "title": "Blog",
-      "description": "Kodlama, DevOps, bulut ve daha fazlası hakkında fikirlerimi paylaştığım blog yazılarımı keşfedin. İçeriklerim Hashnode Headless CMS ile sunulmaktadır."
+      "title": "Yazılar",
+      "description": "Kodlama, DevOps, bulut ve daha fazlası hakkında fikirlerimi paylaştığım yazılarımı keşfedin."
     },
-    "title": "Blog"
+    "title": "Yazılar",
+    "back-to-blogs": "Yazılar'a dön",
+    "no-results-found": "Sonuç bulunamadı",
+    "recent-blogs": "Son Yazılar",
+    "all-blogs": "Tüm Yazılar",
+    "search-blogs": "Yazıları başlık veya etiketleriyle arayın...",
+    "showing": "Toplam {length} sayfada {noOfBlogsShownAlready} yazı gösteriliyor",
+    "showing-page": "Toplam {pageQuery} sayfadan {totalPages}. sayfa",
+    "read-time": "{readTimeInMinutes} dk okuma süresi"
   },
   "Projects": {
     "Metadata": {
@@ -76,7 +92,7 @@
     "message-is-required": "Mesaj gereklidir.",
     "Newsletter": {
       "title": "Bültenime abone olun",
-      "subtitle": "En yeni projeleri ve blog güncellemelerini gelen kutunuza alın.",
+      "subtitle": "En yeni projeleri ve yazılarımı gelen kutunuza alın.",
       "email": "E-posta",
       "button": "Abone Ol",
       "placeholder": "E-posta adresinizi girin...",

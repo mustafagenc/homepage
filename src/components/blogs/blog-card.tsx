@@ -8,7 +8,6 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { formatDate } from '@/lib/utils';
 import { IBlogCardMetadata } from '@/types/iBlog';
 import { UserAvatar } from '@/components/shared/user-avatar';
 import { Badge } from '@/components/ui/badge';
@@ -20,6 +19,7 @@ import {
   PER_PAGE_QUERY_PARAM,
   SEARCH_QUERY_PARAM,
 } from '@/lib/constants';
+import { useFormatter, useTranslations } from 'next-intl';
 
 interface BlogCardProps {
   blogWithMeta: IBlogCardMetadata;
@@ -36,6 +36,8 @@ export const BlogCard = ({ blogWithMeta, searchParams }: BlogCardProps) => {
   const { title, author, tags, brief, slug, readTimeInMinutes, publishedAt } =
     blogWithMeta;
 
+  const t = useTranslations('Blogs');
+
   const handleBadgeClick = (language: string) => {
     const params = new URLSearchParams(searchParams);
 
@@ -47,6 +49,13 @@ export const BlogCard = ({ blogWithMeta, searchParams }: BlogCardProps) => {
 
     router.push(`/blogs?${params.toString()}`);
   };
+
+  const format = useFormatter();
+  const publishedDate = format.dateTime(new Date(publishedAt), {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
 
   return (
     <Card className="w-full border-none bg-zinc-50 dark:bg-zinc-900">
@@ -116,12 +125,12 @@ export const BlogCard = ({ blogWithMeta, searchParams }: BlogCardProps) => {
 
           <span className="flex items-center gap-1">
             <BookIcon className="size-4" />
-            {`${readTimeInMinutes} min read`}
+            {t('read-time', { readTimeInMinutes })}
           </span>
 
           <span className="divider mx-1">•</span>
 
-          <span>{formatDate({ date: publishedAt, short: true })}</span>
+          <span>{publishedDate}</span>
         </CardFooter>
       </div>
     </Card>

@@ -42,6 +42,8 @@ export default async function Page({
 }: {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
+  const t = await getTranslations();
+
   const { perPageQuery, pageQuery, searchQuery } = await parseQueryParams({
     searchParams,
     defaultPerPage: BLOGS_PER_PAGE_DEFAULT,
@@ -97,14 +99,14 @@ export default async function Page({
 
   return (
     <section>
-      <h1 className="title">Blogs</h1>
+      <h1 className="title">{t('Blogs.title')}</h1>
 
       <Suspense
         fallback={
           <Input
             disabled
             type="text"
-            placeholder="Loading..."
+            placeholder={t('Shared.loading')}
             className="mb-4 h-9 w-full sm:w-1/2"
           />
         }
@@ -113,7 +115,7 @@ export default async function Page({
           query={searchQuery}
           endpoint="blogs"
           debounceTime={DEBOUNCE_TIME_BLOGS}
-          placeholder="Search blogs by title or tags..."
+          placeholder={t('Blogs.search-blogs')}
         />
       </Suspense>
 
@@ -145,11 +147,16 @@ export default async function Page({
 
       <div className="mb-10 mt-5 flex justify-between text-sm font-medium text-muted-foreground">
         <p>
-          Showing {noOfBlogsShownAlready} of{' '}
-          {searchQuery ? filteredBlogsLength : blogslength} blogs
+          {t('Blogs.showing', {
+            noOfBlogsShownAlready: noOfBlogsShownAlready,
+            length: searchQuery ? filteredBlogsLength : blogslength,
+          })}
         </p>
         <p>
-          Page {totalPages === 0 ? 0 : pageQuery} of {totalPages}
+          {t('Blogs.showing-page', {
+            pageQuery: totalPages === 0 ? 0 : pageQuery,
+            totalPages: totalPages,
+          })}
         </p>
       </div>
 

@@ -9,6 +9,8 @@ import {
   SEARCH_QUERY_PARAM,
 } from '@/lib/constants';
 import { Link } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
+import { capitalizeFirstLetter } from '@/lib/utils';
 
 interface BackButtonProps {
   endpoint: 'projects' | 'blogs';
@@ -16,6 +18,7 @@ interface BackButtonProps {
 
 export const BackButton = ({ endpoint }: BackButtonProps) => {
   const searchParams = useSearchParams();
+  const t = useTranslations('Shared');
 
   const pageQueryParam = searchParams?.get(PAGE_QUERY_PARAM) || null;
   const perPageQueryParam = searchParams?.get(PER_PAGE_QUERY_PARAM) || null;
@@ -41,7 +44,8 @@ export const BackButton = ({ endpoint }: BackButtonProps) => {
       })}
     >
       <ArrowLeftIcon className="size-5" />
-      Back to {endpoint}
+
+      {t('back-to', { endpoint: capitalizeFirstLetter(endpoint) })}
     </Link>
   );
 };

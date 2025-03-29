@@ -5,6 +5,7 @@ import {
   SEARCH_QUERY_PARAM,
 } from '@/lib/constants';
 import { IBlogCardMetadata } from '@/types/iBlog';
+import { getTranslations } from 'next-intl/server';
 
 interface BlogsProps {
   blogsWithMeta: IBlogCardMetadata[];
@@ -18,11 +19,12 @@ interface BlogsProps {
 export const Blogs = async ({ blogsWithMeta, searchParams }: BlogsProps) => {
   const resolvedBlogsWithMeta = await blogsWithMeta;
   const resolvedSearchParams = await searchParams;
+  const t = await getTranslations('Blogs');
   return (
     <>
       {resolvedBlogsWithMeta && resolvedBlogsWithMeta.length === 0 ? (
         <p className="text-muted-foreground text-sm font-medium">
-          No results found
+          {t('no-results-found')}
         </p>
       ) : (
         <ul className="flex flex-col gap-8">

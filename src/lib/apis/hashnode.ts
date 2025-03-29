@@ -216,36 +216,23 @@ export async function getBlogPostIDBySlug(
   const publicationHost = env.NEXT_PUBLIC_HASHNODE_PUBLICATION_HOST;
   const username = HASHNODE_USERNAME;
 
-  console.log('Publication Host:', publicationHost);
-  console.log('Username:', username);
-  console.log('Slug:', slug);
-
   try {
     // İlk yöntemi dene
-    console.log('Trying first method with publication host...');
     const response = await executeGraphQLRequest<IBlogPostIDBySlugResponse>(
       QUERIES.GET_POST_BY_SLUG,
       { publicationHost, slug },
       'Failed to fetch blog post ID'
     );
 
-    console.log('First method response:', JSON.stringify(response, null, 2));
-
     if (response.publication?.post?.id) {
       return { id: response.publication.post.id };
     }
 
     // İkinci yöntemi dene
-    console.log('Trying second method with username...');
     const altResponse = await executeGraphQLRequest<IBlogPostIDBySlugResponse>(
       QUERIES.GET_POST_BY_SLUG_ALT,
       { username },
       'Failed to fetch blog post ID with username'
-    );
-
-    console.log(
-      'Second method response:',
-      JSON.stringify(altResponse, null, 2)
     );
 
     const posts = altResponse.user?.posts?.edges ?? [];
@@ -255,18 +242,12 @@ export async function getBlogPostIDBySlug(
     }
 
     // Üçüncü yöntemi dene
-    console.log('Trying third method with direct slug...');
     const directResponse =
       await executeGraphQLRequest<IBlogPostIDBySlugResponse>(
         QUERIES.GET_POST_BY_SLUG_DIRECT,
         { slug },
         'Failed to fetch blog post ID with direct slug'
       );
-
-    console.log(
-      'Third method response:',
-      JSON.stringify(directResponse, null, 2)
-    );
 
     if (directResponse.post?.id) {
       return { id: directResponse.post.id };

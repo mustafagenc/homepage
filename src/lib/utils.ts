@@ -73,3 +73,7 @@ function removeAlignProperty({ markdown }: { markdown: string }): string {
     return match.replace(/\s+align=".*?"/, '');
   });
 }
+
+export function capitalizeFirstLetter(str: string): string {
+  return str[0].toUpperCase() + str.slice(1);
+}

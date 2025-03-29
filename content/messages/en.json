@@ -2,17 +2,14 @@
   "Shared": {
     "loading": "Loading...",
     "notPlaying": "Not Playing",
-    "name": "Name",
-    "enter-your-name": "Enter your name...",
-    "email": "E-mail",
-    "enter-your-email": "Enter your email...",
-    "message": "Message",
-    "enter-your-message": "Enter your message...",
-    "nameIsrRequired": "Name is required.",
-    "emailIsRequired": "Email is required.",
-    "emailIsInvalid": "Email is invalid.",
-    "messageIsRequired": "Message is required.",
-    "mustBeAtLeast2": "Must be at least 2 characters."
+    "back-to": "Back to {endpoint}",
+    "previous": "Previous",
+    "next": "Next",
+    "apply": "Apply",
+    "reset-filters": "Reset Filters",
+    "per-page": "Per Page",
+    "page": "Page",
+    "filter": "Filter"
   },
   "Navbar": {
     "home": "Home",
@@ -47,7 +44,15 @@
       "title": "Blogs",
       "description": "Explore my collection of blog posts, where I share my ideas on coding, DevOps, cloud and more, powered by Hashnode Headless CMS."
     },
-    "title": "Blogs"
+    "title": "Blogs",
+    "back-to-blogs": "Back to blogs",
+    "no-results-found": "No results found",
+    "recent-blogs": "Recent blogs",
+    "all-blogs": "All blogs",
+    "search-blogs": "Search blogs by title or tags...",
+    "showing": "Showing {noOfBlogsShownAlready} blogs on {length} page(s)",
+    "showing-page": "Page {pageQuery} of {totalPages}",
+    "read-time": "{readTimeInMinutes} min read"
   },
   "Projects": {
     "Metadata": {

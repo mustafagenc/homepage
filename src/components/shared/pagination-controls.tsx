@@ -4,6 +4,7 @@ import {
   SEARCH_QUERY_PARAM,
 } from '@/lib/constants';
 import { Link } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
 
 interface PaginationControlProps {
   searchTerm?: string;
@@ -20,6 +21,8 @@ export const PaginationControls = ({
   perPage = 5,
   endpoint,
 }: PaginationControlProps) => {
+  const t = useTranslations('Shared');
+
   return (
     <nav aria-label="Pagination" className="mt-3 flex justify-between">
       {currentPage > 1 &&
@@ -36,7 +39,7 @@ export const PaginationControls = ({
           scroll={false}
           className="inline-flex items-center text-sm font-semibold text-muted-foreground underline underline-offset-4 hover:text-zinc-500"
         >
-          Previous
+          {t('previous')}
         </Link>
       ) : (
         <button
@@ -44,7 +47,7 @@ export const PaginationControls = ({
           aria-disabled
           className="text-sm font-semibold text-muted-foreground opacity-75"
         >
-          Previous
+          {t('previous')}
         </button>
       )}
 
@@ -61,7 +64,7 @@ export const PaginationControls = ({
           scroll={false}
           className="inline-flex items-center text-sm font-semibold text-muted-foreground underline underline-offset-4 hover:text-zinc-500"
         >
-          Next
+          {t('next')}
         </Link>
       ) : (
         <button
@@ -69,7 +72,7 @@ export const PaginationControls = ({
           aria-disabled
           className="text-sm font-semibold text-muted-foreground opacity-75"
         >
-          Next
+          {t('next')}
         </button>
       )}
     </nav>
