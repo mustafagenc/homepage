@@ -3,9 +3,7 @@ import { GitHubIcon } from '@/components/icons/github';
 import { HashnodeIcon } from '@/components/icons/hashnode';
 import { InstagramIcon } from '@/components/icons/instagram';
 import { LinkedInIcon } from '@/components/icons/linkedin';
-import { RSSIcon } from '@/components/icons/rss';
 import { TwitterIcon } from '@/components/icons/twitter';
-import { VercelLogoIcon } from '@radix-ui/react-icons';
 
 export const BASE_URL =
   process.env.NODE_ENV === 'development'
@@ -109,17 +107,4 @@ export const socialMediaLinks = [
   //     },
   //   ],
   // },
-];
-
-export const footerLinks = [
-  {
-    name: 'Vercel',
-    href: 'https://vercel.com',
-    icon: VercelLogoIcon,
-  },
-  {
-    name: 'RSS',
-    href: BASE_URL + '/rss.xml',
-    icon: RSSIcon,
-  },
 ];

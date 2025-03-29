@@ -4,9 +4,11 @@ import { useTranslations } from 'next-intl';
 import GitHubButton from 'react-github-btn';
 
 import { InfoTooltip } from '@/components/shared/info-tooltip';
-import { footerLinks } from '@/lib/constants';
 
 import { Spotify } from './spotify';
+import { Link } from '@/i18n/navigation';
+import { RSSIcon } from '@/components/icons/rss';
+import { VercelLogoIcon } from '@radix-ui/react-icons';
 
 export const Footer = () => {
   const t = useTranslations('Footer');
@@ -25,25 +27,32 @@ export const Footer = () => {
               Fork
             </GitHubButton>
           </div>
-          {footerLinks.map((link) => (
-            <InfoTooltip
-              key={link.name}
-              label={link.name}
-              side="top"
-              className="text-xs"
+          <InfoTooltip
+            key="Vercel"
+            label="Vercel"
+            side="top"
+            className="text-xs"
+          >
+            <Link
+              href="https://vercel.org/"
+              className="text-muted-foreground hover:text-foreground mt-1"
+              target="_blank"
+              rel="noreferrer noopener"
             >
-              <a
-                key={link.name}
-                href={link.href}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="text-muted-foreground hover:text-foreground mt-1"
-              >
-                <span className="sr-only">{link.name}</span>
-                <link.icon className="size-5" />
-              </a>
-            </InfoTooltip>
-          ))}
+              <span className="sr-only">Vercel</span>
+              <VercelLogoIcon className="size-5" />
+            </Link>
+          </InfoTooltip>
+          <InfoTooltip key="RSS" label="RSS" side="top" className="text-xs">
+            <Link
+              target="_blank"
+              href="/rss.xml"
+              className="text-muted-foreground hover:text-foreground mt-1"
+            >
+              <span className="sr-only">RSS</span>
+              <RSSIcon className="size-5" />
+            </Link>
+          </InfoTooltip>
         </div>
         <div className="mt-8 md:order-1 md:mt-0">
           <p className="text-muted-foreground text-center text-base leading-5">
