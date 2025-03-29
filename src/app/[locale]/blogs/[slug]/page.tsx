@@ -9,33 +9,12 @@ import { BackButton } from '@/components/shared/back-button';
 import { Suspense } from 'react';
 import { Button } from '@/components/ui/button';
 
-import {
-  getAllBlogPostsSlug,
-  getBlogPostByID,
-  getBlogPostIDBySlug,
-} from '@/lib/apis/hashnode';
+import { getBlogPostByID, getBlogPostIDBySlug } from '@/lib/apis/hashnode';
 import { Link } from '@/i18n/navigation';
 import { BASE_URL } from '@/lib/constants';
 import { getFormatter, getNow, getTranslations } from 'next-intl/server';
 
 type Params = Promise<{ slug: string; locale: string }>;
-
-// Static Site Generation (SSG) to improve performance on static contents.
-export async function generateStaticParams() {
-  try {
-    const { slugs } = await getAllBlogPostsSlug();
-    return slugs
-      .filter((blogSlug): blogSlug is { slug: string } =>
-        Boolean(blogSlug?.slug)
-      )
-      .map((blogSlug) => ({
-        slug: blogSlug.slug,
-      }));
-  } catch (error) {
-    console.error('Error generating static params for blogs:', error);
-    return [];
-  }
-}
 
 export async function generateMetadata({ params }: { params: Params }) {
   const DEFAULT_METADATA = {
