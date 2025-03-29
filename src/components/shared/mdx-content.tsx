@@ -51,6 +51,7 @@ function CustomImage({ ...props }: any) {
     const url = new URL(imageSrc);
     if (url.hostname === 'img.shields.io') return null;
   } catch (e) {
+    console.log(e);
     // If imageSrc is not a valid URL, continue with the existing logic
   }
 
