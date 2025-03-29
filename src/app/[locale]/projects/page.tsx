@@ -1,11 +1,8 @@
 import { getTranslations } from 'next-intl/server';
-
-import { AlertIcon } from '@/components/icons/alert';
 import { FilterIcon } from '@/components/icons/filter';
 import { PaginationControls } from '@/components/shared/pagination-controls';
 import { FilterDropdown } from '@/components/shared/filter-dropdown';
 import { Search } from '@/components/shared/search';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Projects } from '@/components/projects/projects';
 import {
   DEBOUNCE_TIME_PROJECTS,

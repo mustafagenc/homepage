@@ -16,7 +16,6 @@ import { Suspense } from 'react';
 type Params = Promise<{ projectName: string; locale: string }>;
 
 export async function generateMetadata({ params }: { params: Params }) {
-
   const { projectName } = await params;
 
   const DEFAULT_METADATA = {
