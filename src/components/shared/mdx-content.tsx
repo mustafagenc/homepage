@@ -47,7 +47,12 @@ function CustomImage({ ...props }: any) {
     );
 
   // Don't render badges.
-  if (imageSrc.includes('img.shields.io')) return null;
+  try {
+    const url = new URL(imageSrc);
+    if (url.hostname === 'img.shields.io') return null;
+  } catch (e) {
+    // If imageSrc is not a valid URL, continue with the existing logic
+  }
 
   return (
     <div className="my-2 flex justify-center">
