@@ -5,7 +5,7 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 
 import { Loader } from '@/components/icons/loader';
-import { Button } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
 import {
   Form,
   FormControl,
@@ -150,6 +150,20 @@ export const Contact = () => {
           </p>
         </form>
       </Form>
+      <div className="flex flex-col gap-4">
+        <p className="font-medium text-zinc-800 dark:text-zinc-300">
+          {t('schedule-meeting')}
+        </p>
+        <Link
+          href="/meet"
+          className={buttonVariants({
+            variant: 'secondary',
+            className: 'max-w-fit',
+          })}
+        >
+          {t('book-a-meet')}
+        </Link>
+      </div>
     </section>
   );
 };

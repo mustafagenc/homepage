@@ -5,6 +5,7 @@ import { Contact } from '@/components/contact/contact';
 import { PUBLIC_MAIL } from '@/lib/constants';
 
 import type { Metadata } from 'next';
+import { NewsletterForm } from '@/components/contact/newsletter-form';
 
 type Params = Promise<{ locale: string }>;
 
@@ -48,6 +49,7 @@ export default function Page() {
         </p>
       </div>
       <Contact />
+      <NewsletterForm />
     </section>
   );
 }

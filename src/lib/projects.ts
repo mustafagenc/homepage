@@ -82,7 +82,7 @@ export function getProjectByTitle({
     return {
       metadata: {
         ...data,
-        author: 'Shrijal Acharya',
+        author: 'Mustafa Genç',
       } as IProjectMetadata,
       content,
     };

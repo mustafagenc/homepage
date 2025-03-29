@@ -96,7 +96,7 @@ export default async function Page({
         : filteredProjectsLength + (pageQuery - 1) * perPageQuery;
 
   return (
-    <section>
+    <section className="object-fill">
       <h1 className="title">{t('title')}</h1>
       <Suspense
         fallback={
