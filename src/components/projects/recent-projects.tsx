@@ -1,15 +1,18 @@
 import Link from 'next/link';
 import { IProjectMetadata } from '@/types/iProject';
 import { Projects } from '@/components/projects/projects';
+import { useTranslations } from 'next-intl';
 
 interface RecentProjectsProps {
   projectsMeta: IProjectMetadata[];
 }
 
 export default function RecentPosts({ projectsMeta }: RecentProjectsProps) {
+  const t = useTranslations('Projects');
+
   return (
     <section className="my-16">
-      <h2 className="title">Recent projects</h2>
+      <h2 className="title">{t('recent-projects')}</h2>
       <Projects projectsMeta={projectsMeta} />
 
       <Link
@@ -17,7 +20,7 @@ export default function RecentPosts({ projectsMeta }: RecentProjectsProps) {
         className="mt-8 inline-flex items-center gap-2 text-sm font-semibold"
       >
         <span className="text-muted-foreground underline underline-offset-4 hover:text-foreground hover:transition">
-          All projects
+          {t('all-projects')}
         </span>
       </Link>
     </section>

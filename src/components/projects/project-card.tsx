@@ -10,9 +10,9 @@ import {
 } from '@/components/ui/card';
 import { IProjectMetadata } from '@/types/iProject';
 import { Badge } from '@/components/ui/badge';
-import { formatDate } from '@/lib/utils';
 import { buttonVariants } from '@/components/ui/button';
 import { GitHubIcon } from '@/components/icons/github';
+import { ArrowUpRightIcon } from '@/components/icons/arrowUpRight';
 import { UserAvatar } from '@/components/shared/user-avatar';
 import {
   PAGE_INDEX_DEFAULT,
@@ -22,6 +22,7 @@ import {
 } from '@/lib/constants';
 import { useRouter } from 'next/navigation';
 import { Link } from '@/i18n/navigation';
+import { useFormatter, useTranslations } from 'next-intl';
 
 interface ProjectCardProps {
   projectMetadata: IProjectMetadata;
@@ -37,7 +38,7 @@ export const ProjectCard = ({
   searchParams,
 }: ProjectCardProps) => {
   const router = useRouter();
-
+  const t = useTranslations('Projects');
   const {
     title,
     author,
@@ -48,7 +49,12 @@ export const ProjectCard = ({
     created_at,
   } = projectMetadata;
 
-  const formattedCreatedDate = formatDate({ date: created_at, short: true });
+  const format = useFormatter();
+  const formattedCreatedDate = format.dateTime(new Date(created_at), {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
 
   const handleBadgeClick = (language: string) => {
     const params = new URLSearchParams(searchParams);
@@ -135,14 +141,14 @@ export const ProjectCard = ({
           </CardContent>
         </Link>
       ) : null}
-      <CardFooter className="flex justify-between">
+      <CardFooter className="flex">
         <a
           href={clone_url}
           target="_blank"
           rel="noreferrer noopener"
-          aria-label="View project on GitHub"
           className={buttonVariants({
             variant: 'outline',
+            className: 'mr-2',
           })}
         >
           <GitHubIcon className="size-5" />
@@ -154,12 +160,12 @@ export const ProjectCard = ({
             href={homepage}
             target="_blank"
             rel="noreferrer noopener"
-            aria-label="View live demo of the project"
             className={buttonVariants({
-              variant: 'default',
+              variant: 'outline',
             })}
           >
-            Live Demo
+            <ArrowUpRightIcon className="size-5" />
+            <span className="ml-1 hidden sm:inline">{t('live-demo')}</span>
           </a>
         ) : null}
       </CardFooter>

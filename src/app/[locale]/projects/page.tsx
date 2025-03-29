@@ -42,7 +42,7 @@ export default async function Page({
 }: {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
-  const t = await getTranslations('Projects');
+  const t = await getTranslations();
 
   const { perPageQuery, pageQuery, searchQuery } = await parseQueryParams({
     searchParams,
@@ -97,13 +97,13 @@ export default async function Page({
 
   return (
     <section className="object-fill">
-      <h1 className="title">{t('title')}</h1>
+      <h1 className="title">{t('Projects.title')}</h1>
       <Suspense
         fallback={
           <Input
             disabled
             type="text"
-            placeholder="Loading.."
+            placeholder={t('Shared.loading')}
             className="mb-4 h-9 w-full sm:w-1/2"
           />
         }
@@ -112,7 +112,7 @@ export default async function Page({
           query={searchQuery}
           debounceTime={DEBOUNCE_TIME_PROJECTS}
           endpoint="projects"
-          placeholder="Search projects by name or language..."
+          placeholder={t('Projects.search-projects')}
         />
       </Suspense>
 
@@ -123,7 +123,7 @@ export default async function Page({
             variant="outline"
             className="flex items-center gap-1 text-zinc-700 dark:text-zinc-400"
           >
-            Filter
+            {t('Shared.filter')}
             <FilterIcon className="size-4" />
           </Button>
         }
@@ -144,11 +144,16 @@ export default async function Page({
 
       <div className="mb-10 mt-5 flex justify-between text-sm font-medium text-muted-foreground">
         <p>
-          Showing {noOfPostsShownAlready} of{' '}
-          {searchQuery ? filteredProjectsLength : projectsLength} projects
+          {t('Projects.showing', {
+            total: noOfPostsShownAlready,
+            shown: searchQuery ? filteredProjectsLength : projectsLength,
+          })}
         </p>
         <p>
-          Page {totalPages === 0 ? 0 : pageQuery} of {totalPages}
+          {t('Projects.showing-page', {
+            pageQuery: totalPages === 0 ? 0 : pageQuery,
+            totalPages: totalPages,
+          })}
         </p>
       </div>
 

@@ -24,7 +24,6 @@ export async function generateMetadata({
   };
 }
 export default function Page() {
-
   const t = useTranslations('Meet');
 
   return (

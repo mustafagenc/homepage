@@ -8,10 +8,10 @@ import { Button } from '@/components/ui/button';
 import { UserAvatar } from '@/components/shared/user-avatar';
 import { BASE_URL, PROJECT_FILTER_TOPIC } from '@/lib/constants';
 import { getProjectByTitle } from '@/lib/projects';
-import { formatDate } from '@/lib/utils';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
+import { getFormatter, getTranslations } from 'next-intl/server';
 
 type Params = Promise<{ projectName: string; locale: string }>;
 
@@ -71,13 +71,19 @@ export default async function Page(props: { params: Params }) {
   const { projectName } = await params;
   try {
     const project = getProjectByTitle({ title: projectName });
+    const t = await getTranslations('Projects');
     if (!project) notFound();
 
     const { metadata, content } = project;
 
-    const { title, author, clone_url, topics, created_at } = metadata;
+    const { title, author, clone_url, homepage, topics, created_at } = metadata;
 
-    const projectCreatedDate = formatDate({ date: created_at, short: true });
+    const format = await getFormatter();
+    const formattedCreatedDate = format.dateTime(new Date(created_at), {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    });
 
     return (
       <section className="pb-10">
@@ -85,7 +91,7 @@ export default async function Page(props: { params: Params }) {
           fallback={
             <Button disabled variant="secondary" className="mb-8 flex gap-2">
               <ArrowLeftIcon className="size-5" />
-              Back to projects
+              {t('back-to-projects')}
             </Button>
           }
         >
@@ -120,12 +126,12 @@ export default async function Page(props: { params: Params }) {
               rel="noreferrer noopener"
               className="flex items-center gap-1 text-sm font-semibold text-muted-foreground hover:underline hover:underline-offset-2"
             >
-              View on GitHub
+              {t('view-on-github')}
             </a>
             <span className="divider mx-1">•</span>
-            {projectCreatedDate && (
+            {formattedCreatedDate && (
               <span className="text-sm text-muted-foreground">
-                {projectCreatedDate}
+                {formattedCreatedDate}
               </span>
             )}
           </div>
@@ -165,10 +171,16 @@ export default async function Page(props: { params: Params }) {
         </main>
 
         <div className="mt-10 flex items-center gap-1 text-sm font-medium text-muted-foreground">
-          <div className="flex items-center gap-1 hover:text-foreground hover:transition">
+          <div className="flex items-center gap-1 hover:text-foreground hover:transition mr-2">
             <ArrowUpRightIcon className="size-4" />
             <a href={clone_url} target="_blank" rel="noreferrer noopener">
               GitHub
+            </a>
+          </div>
+          <div className="flex items-center gap-1 hover:text-foreground hover:transition">
+            <ArrowUpRightIcon className="size-4" />
+            <a href={homepage} target="_blank" rel="noreferrer noopener">
+              {t('live-demo')}
             </a>
           </div>
         </div>

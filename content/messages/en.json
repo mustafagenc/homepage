@@ -51,7 +51,7 @@
     "recent-blogs": "Recent blogs",
     "all-blogs": "All blogs",
     "search-blogs": "Search blogs by title or tags...",
-    "showing": "Showing {noOfBlogsShownAlready} blogs on {length} page(s)",
+    "showing": "Showing {noOfBlogsShownAlready} of {length} blogs.",
     "showing-page": "Page {pageQuery} of {totalPages}",
     "read-time": "{readTimeInMinutes} min read"
   },
@@ -60,7 +60,16 @@
       "title": "Projects",
       "description": "Collection of my selected public repositories fetched through GitHub Actions."
     },
-    "title": "Projects"
+    "title": "Projects",
+    "search-projects": "İsme veya dile göre projeleri ara...",
+    "no-results-found": "No results found",
+    "recent-projects": "Recent Projects",
+    "all-projects": "All Projects",
+    "live-demo": "Live Demo",
+    "view-on-github": "View on GitHub",
+    "back-to-projects": "Back to projects",
+    "showing": "Showing {shown} of {total} projects.",
+    "showing-page": "Page {pageQuery} of {totalPages}"
   },
   "Work": {
     "Metadata": {

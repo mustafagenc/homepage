@@ -5,6 +5,7 @@ import {
   PER_PAGE_QUERY_PARAM,
   SEARCH_QUERY_PARAM,
 } from '@/lib/constants';
+import { getTranslations } from 'next-intl/server';
 
 interface ProjectsProps {
   projectsMeta: IProjectMetadata[];
@@ -15,12 +16,17 @@ interface ProjectsProps {
   };
 }
 
-export const Projects = ({ projectsMeta, searchParams }: ProjectsProps) => {
+export const Projects = async ({
+  projectsMeta,
+  searchParams,
+}: ProjectsProps) => {
+  const t = await getTranslations('Projects');
+
   return (
     <>
       {projectsMeta.length === 0 ? (
         <p className="text-sm font-medium text-muted-foreground">
-          No results found
+          {t('no-results-found')}
         </p>
       ) : (
         <ul className="flex flex-col gap-8">

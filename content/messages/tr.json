@@ -51,16 +51,25 @@
     "recent-blogs": "Son Yazılar",
     "all-blogs": "Tüm Yazılar",
     "search-blogs": "Yazıları başlık veya etiketleriyle arayın...",
-    "showing": "Toplam {length} sayfada {noOfBlogsShownAlready} yazı gösteriliyor",
+    "showing": "Toplam {length} blogdan {noOfBlogsShownAlready} tanesi gösteriliyor.",
     "showing-page": "Toplam {pageQuery} sayfadan {totalPages}. sayfa",
     "read-time": "{readTimeInMinutes} dk okuma süresi"
   },
   "Projects": {
     "Metadata": {
-      "title": "Projelerim",
+      "title": "Projeler",
       "description": "GitHub Actions aracılığıyla alınan seçili herkese açık repolarımın koleksiyonum."
     },
-    "title": "Projelerim"
+    "title": "Projeler",
+    "search-projects": "İsme veya dile göre projeleri ara...",
+    "no-results-found": "Sonuç bulunamadı",
+    "recent-projects": "Son Projeler",
+    "all-projects": "Tüm Projeler",
+    "live-demo": "Canlı Demo",
+    "view-on-github": "GitHub'da Görüntüle",
+    "back-to-projects": "Projeler'e Geri Dön",
+    "showing": "Toplam {total} projeden {shown} tanesi gösteriliyor.",
+    "showing-page": "Toplam {pageQuery} sayfadan {totalPages}. sayfa"
   },
   "Work": {
     "Metadata": {
