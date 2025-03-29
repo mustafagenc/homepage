@@ -1,13 +1,15 @@
 import { getBlogPostsCardMeta } from '@/lib/apis/hashnode';
 import { BASE_URL, PUBLIC_MAIL } from '@/lib/constants';
 import { getProjectsMetadata } from '@/lib/projects';
+import { getTranslations } from 'next-intl/server';
 import RSS from 'rss';
 
 export async function GET() {
+  const t = await getTranslations('RSS');
+
   const feedConfig = {
-    title: 'Mustafa Genç',
-    description:
-      'Stay updated with the latest selected public GitHub repositories and blog posts from Mustafa Genç.',
+    title: t('title'),
+    description: t('description'),
     site_url: new URL(BASE_URL).toString(),
     feed_url: new URL('/rss.xml', BASE_URL).toString(),
     image_url: new URL('/images/mustafa-genc.jpg', BASE_URL).toString(),

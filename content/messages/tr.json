@@ -138,5 +138,15 @@
     "contact-details": "İletişim Bilgileri",
     "contact-details-description": "Bu Gizlilik Politikası hakkında herhangi bir sorunuz varsa, lütfen <email></email> adresine ulaşın.",
     "contact-me": "Benimle iletişime geçin"
+  },
+  "RSS": {
+    "title": "Mustafa Genç",
+    "description": "Stay updated with the latest selected public GitHub repositories and blog posts from Mustafa Genç.",
+    "copyright": "\u00A9 {date} Mustafa Genç",
+    "generator": "RSS Feed for Node and Next.js",
+    "blogby": "{title} blog by Mustafa Genç",
+    "projectby": "{title} project by Mustafa Genç",
+    "blog": "Blogs",
+    "project": "Projects"
   }
 }

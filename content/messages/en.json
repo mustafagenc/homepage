@@ -138,5 +138,15 @@
     "contact-details": "Contact Details",
     "contact-details-description": "If you have any questions or concerns about this Privacy Policy, please contact me at <email></email>.",
     "contact-me": "Contact me"
+  },
+  "RSS": {
+    "title": "Mustafa Genc",
+    "description": "Stay updated with the latest selected public GitHub repositories and blog posts from Mustafa Genc.",
+    "copyright": "\u00A9 {date} Mustafa Genc",
+    "generator": "RSS Feed for Node and Next.js",
+    "blogby": "{title} blog by Mustafa Genc",
+    "projectby": "{title} project by Mustafa Genc",
+    "blog": "Blogs",
+    "project": "Projects"
   }
 }
