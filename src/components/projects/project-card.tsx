@@ -20,8 +20,7 @@ import {
   PER_PAGE_QUERY_PARAM,
   SEARCH_QUERY_PARAM,
 } from '@/lib/constants';
-import { useRouter } from 'next/navigation';
-import { Link } from '@/i18n/navigation';
+import { Link, useRouter } from '@/i18n/navigation';
 import { useFormatter, useTranslations } from 'next-intl';
 
 interface ProjectCardProps {
@@ -58,13 +57,8 @@ export const ProjectCard = ({
 
   const handleBadgeClick = (language: string) => {
     const params = new URLSearchParams(searchParams);
-
-    // Set the new search query
     params.set(SEARCH_QUERY_PARAM, language);
-
-    // Reset page to 1 when applying a new search
     params.set(PAGE_QUERY_PARAM, PAGE_INDEX_DEFAULT.toString());
-
     router.push(`/projects?${params.toString()}`);
   };
 
