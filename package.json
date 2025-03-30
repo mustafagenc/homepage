@@ -33,6 +33,7 @@
     "@radix-ui/react-slot": "^1.1.2",
     "@radix-ui/react-tooltip": "^1.1.8",
     "@react-email/render": "^1.0.5",
+    "@sentry/nextjs": "^9.10.1",
     "@t3-oss/env-nextjs": "^0.12.0",
     "@tailwindcss/typography": "^0.5.16",
     "@uidotdev/usehooks": "^2.4.1",
