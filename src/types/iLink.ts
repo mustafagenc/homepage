@@ -8,15 +8,15 @@ export type ILink = {
   domain: string; // 'figma-to-react.vercel.app',
   tags: string[]; // [ 'history', 'frontend', 'figma', 'react' ],
   cover: string; // 'https://rdl.ink/render/https%3A%2F%2Ffigma-to-react.vercel.app%2F',
-  // media: any; // [Array];
-  // collectionId: number; // 15611214
-  // note: string; // "";
-  // removed: boolean; // false;
-  // lastUpdate: string; // "2022-11-22T19:21:12.043Z";
-  // important: boolean; // false;
-  // sort: number; // 475927149;
-  // collection: [Object];
-  // creatorRef: [Object];
-  // user: [Object];
-  // highlights: [];
+  media: object; // [Array];
+  collectionId: number; // 15611214
+  note: string; // "";
+  removed: boolean; // false;
+  lastUpdate: string; // "2022-11-22T19:21:12.043Z";
+  important: boolean; // false;
+  sort: number; // 475927149;
+  collection: [object];
+  creatorRef: [object];
+  user: [object];
+  highlights: [];
 };

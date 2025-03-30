@@ -13,6 +13,7 @@ import {
   RECENT_PROJECTS_DEFAULT,
 } from '@/lib/constants';
 import { getProjectsMetadata } from '@/lib/projects';
+import { Raindrop } from '@/components/bookmark/raindrop';
 
 type Params = Promise<{ locale: string }>;
 
@@ -55,6 +56,7 @@ export default async function Page() {
       <Socials />
       <RecentBlogs blogPosts={blogs} />
       <RecentProjects projectsMeta={projects} />
+      <Raindrop />
       <NewsletterForm />
     </>
   );

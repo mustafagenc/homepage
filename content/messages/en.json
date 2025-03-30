@@ -150,5 +150,8 @@
     "projectby": "{title} project by Mustafa Genc",
     "blog": "Blogs",
     "project": "Projects"
+  },
+  "Bookmarks": {
+    "title": "Bookmarks"
   }
 }
