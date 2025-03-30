@@ -1,9 +1,14 @@
 import { getTranslations } from 'next-intl/server';
+import { redirect } from 'next/navigation';
+import { Suspense } from 'react';
+
 import { FilterIcon } from '@/components/icons/filter';
-import { PaginationControls } from '@/components/shared/pagination-controls';
-import { FilterDropdown } from '@/components/shared/filter-dropdown';
-import { Search } from '@/components/shared/search';
 import { Projects } from '@/components/projects/projects';
+import { FilterDropdown } from '@/components/shared/filter-dropdown';
+import { PaginationControls } from '@/components/shared/pagination-controls';
+import { Search } from '@/components/shared/search';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import {
   DEBOUNCE_TIME_PROJECTS,
   PAGE_QUERY_PARAM,
@@ -11,14 +16,10 @@ import {
   PROJECTS_PER_PAGE_DEFAULT,
   SEARCH_QUERY_PARAM,
 } from '@/lib/constants';
-import { getProjectsCount, getProjectsMetadata } from '@/lib/projects';
-import type { Metadata } from 'next';
-import { redirect } from 'next/navigation';
-import { Suspense } from 'react';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
 import { parseQueryParams } from '@/lib/params';
+import { getProjectsCount, getProjectsMetadata } from '@/lib/projects';
 
+import type { Metadata } from 'next';
 type Params = Promise<{ locale: string }>;
 
 export async function generateMetadata({

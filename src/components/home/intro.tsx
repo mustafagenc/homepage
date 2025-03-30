@@ -1,7 +1,9 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { CustomHoverCard } from '../shared/custom-hover-card';
+
 import { Link } from '@/i18n/navigation';
+
+import { CustomHoverCard } from '../shared/custom-hover-card';
 
 export const Intro = () => {
   const t = useTranslations('Home');

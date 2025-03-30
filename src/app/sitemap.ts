@@ -1,8 +1,8 @@
 import { getBlogPostsCardMeta } from '@/lib/apis/hashnode';
+import { BASE_URL, ROUTES } from '@/lib/constants';
 import { getProjectsMetadata } from '@/lib/projects';
-import type { MetadataRoute } from 'next';
-import { ROUTES, BASE_URL } from '@/lib/constants';
 
+import type { MetadataRoute } from 'next';
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes = ROUTES.map((route) => {
     const normalizedRoute = `${route.replace(/^\/|\/$/g, '')}`;

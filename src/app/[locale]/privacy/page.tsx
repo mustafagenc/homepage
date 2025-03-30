@@ -1,8 +1,10 @@
+import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
+
 import { buttonVariants } from '@/components/ui/button';
 import { Link } from '@/i18n/navigation';
 import { PUBLIC_MAIL } from '@/lib/constants';
-import { useTranslations } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
+
 import type { Metadata } from 'next';
 
 type Params = Promise<{ locale: string }>;

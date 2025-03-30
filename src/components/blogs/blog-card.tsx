@@ -1,6 +1,10 @@
 'use client';
 
-import Link from 'next/link';
+import { useFormatter, useTranslations } from 'next-intl';
+
+import { BookIcon } from '@/components/icons/book';
+import { UserAvatar } from '@/components/shared/user-avatar';
+import { Badge } from '@/components/ui/badge';
 import {
   Card,
   CardContent,
@@ -8,18 +12,14 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { IBlogCardMetadata } from '@/types/iBlog';
-import { UserAvatar } from '@/components/shared/user-avatar';
-import { Badge } from '@/components/ui/badge';
-import { BookIcon } from '@/components/icons/book';
-import { useRouter } from 'next/navigation';
+import { Link, useRouter } from '@/i18n/navigation';
 import {
   PAGE_INDEX_DEFAULT,
   PAGE_QUERY_PARAM,
   PER_PAGE_QUERY_PARAM,
   SEARCH_QUERY_PARAM,
 } from '@/lib/constants';
-import { useFormatter, useTranslations } from 'next-intl';
+import { IBlogCardMetadata } from '@/types/iBlog';
 
 interface BlogCardProps {
   blogWithMeta: IBlogCardMetadata;
@@ -40,13 +40,8 @@ export const BlogCard = ({ blogWithMeta, searchParams }: BlogCardProps) => {
 
   const handleBadgeClick = (language: string) => {
     const params = new URLSearchParams(searchParams);
-
-    // Set the new search query
     params.set(SEARCH_QUERY_PARAM, language);
-
-    // Reset page to 1 when applying a new search
     params.set(PAGE_QUERY_PARAM, PAGE_INDEX_DEFAULT.toString());
-
     router.push(`/blogs?${params.toString()}`);
   };
 

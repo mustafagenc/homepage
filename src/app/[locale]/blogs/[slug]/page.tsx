@@ -1,18 +1,18 @@
+import { getFormatter, getNow, getTranslations } from 'next-intl/server';
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
+import { Suspense } from 'react';
+
 import { ArrowLeftIcon } from '@/components/icons/arrowLeft';
 import { ArrowUpRightIcon } from '@/components/icons/arrowUpRight';
-import { Badge } from '@/components/ui/badge';
+import { BackButton } from '@/components/shared/back-button';
 import MDXContent from '@/components/shared/mdx-content';
 import { UserAvatar } from '@/components/shared/user-avatar';
-import { notFound } from 'next/navigation';
-import { BackButton } from '@/components/shared/back-button';
-import { Suspense } from 'react';
+import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-
-import { getBlogPostByID, getBlogPostIDBySlug } from '@/lib/apis/hashnode';
 import { Link } from '@/i18n/navigation';
+import { getBlogPostByID, getBlogPostIDBySlug } from '@/lib/apis/hashnode';
 import { BASE_URL } from '@/lib/constants';
-import { getFormatter, getNow, getTranslations } from 'next-intl/server';
 
 type Params = Promise<{ slug: string; locale: string }>;
 

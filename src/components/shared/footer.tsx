@@ -3,12 +3,12 @@
 import { useTranslations } from 'next-intl';
 import GitHubButton from 'react-github-btn';
 
+import { RSSIcon } from '@/components/icons/rss';
 import { InfoTooltip } from '@/components/shared/info-tooltip';
+import { Link } from '@/i18n/navigation';
+import { VercelLogoIcon } from '@radix-ui/react-icons';
 
 import { Spotify } from './spotify';
-import { Link } from '@/i18n/navigation';
-import { RSSIcon } from '@/components/icons/rss';
-import { VercelLogoIcon } from '@radix-ui/react-icons';
 
 export const Footer = () => {
   const t = useTranslations('Footer');

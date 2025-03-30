@@ -1,24 +1,25 @@
+import { FilterIcon } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
-import type { Metadata } from 'next';
-import { getBlogPostsCardMeta, getBlogPostsCount } from '@/lib/apis/hashnode';
+import { Suspense } from 'react';
+
 import { Blogs } from '@/components/blogs/blogs';
 import { FilterDropdown } from '@/components/shared/filter-dropdown';
 import { PaginationControls } from '@/components/shared/pagination-controls';
+import { Search } from '@/components/shared/search';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Search } from '@/components/shared/search';
-import { FilterIcon } from 'lucide-react';
-import { Suspense } from 'react';
 import { redirect } from '@/i18n/navigation';
-import { parseQueryParams } from '@/lib/params';
+import { getBlogPostsCardMeta, getBlogPostsCount } from '@/lib/apis/hashnode';
 import {
-  DEBOUNCE_TIME_BLOGS,
   BLOGS_PER_PAGE_DEFAULT,
-  SEARCH_QUERY_PARAM,
+  DEBOUNCE_TIME_BLOGS,
   PAGE_QUERY_PARAM,
   PER_PAGE_QUERY_PARAM,
+  SEARCH_QUERY_PARAM,
 } from '@/lib/constants';
+import { parseQueryParams } from '@/lib/params';
 
+import type { Metadata } from 'next';
 type Params = Promise<{ locale: string }>;
 
 export async function generateMetadata({

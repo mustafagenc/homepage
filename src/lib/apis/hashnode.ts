@@ -1,20 +1,21 @@
 import request, { gql } from 'graphql-request';
-import { env } from '@/lib/env';
-import {
-  IBlogsCount,
-  ISubscribeToNewsletterResponse,
-  IBlogsMetadata,
-  IBlogByIDResponse,
-  IBlogPostIDBySlugResponse,
-  IBlogCardMetadata,
-  IBlogsSlugs,
-} from '@/types/iBlog';
+
 import {
   BLOGS_PER_PAGE_DEFAULT,
   HASHNODE_BLOGS_FETCH_LIMIT,
   HASHNODE_USERNAME,
   PAGE_INDEX_DEFAULT,
 } from '@/lib/constants';
+import { env } from '@/lib/env';
+import {
+  IBlogByIDResponse,
+  IBlogCardMetadata,
+  IBlogPostIDBySlugResponse,
+  IBlogsCount,
+  IBlogsMetadata,
+  IBlogsSlugs,
+  ISubscribeToNewsletterResponse,
+} from '@/types/iBlog';
 
 const QUERIES = {
   GET_POSTS_COUNT: gql`

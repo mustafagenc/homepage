@@ -1,7 +1,8 @@
+import { useTranslations } from 'next-intl';
+
+import { ArrowLeftIcon } from '@/components/icons/arrowLeft';
 import { buttonVariants } from '@/components/ui/button';
 import { Link } from '@/i18n/navigation';
-import { useTranslations } from 'next-intl';
-import { ArrowLeftIcon } from '@/components/icons/arrowLeft';
 
 export default function NotFoundPage() {
   const t = useTranslations('NotFound');

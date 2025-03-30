@@ -1,11 +1,13 @@
-import { IProjectMetadata } from '@/types/iProject';
-import { ProjectCard } from './project-card';
+import { getTranslations } from 'next-intl/server';
+
 import {
   PAGE_QUERY_PARAM,
   PER_PAGE_QUERY_PARAM,
   SEARCH_QUERY_PARAM,
 } from '@/lib/constants';
-import { getTranslations } from 'next-intl/server';
+import { IProjectMetadata } from '@/types/iProject';
+
+import { ProjectCard } from './project-card';
 
 interface ProjectsProps {
   projectsMeta: IProjectMetadata[];

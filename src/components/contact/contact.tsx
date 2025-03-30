@@ -16,13 +16,13 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { Link } from '@/i18n/navigation';
 import { sendEmail } from '@/lib/apis/resend';
 import {
   ContactFormSchema,
   TContactFormSchema,
 } from '@/lib/validators/contact-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Link } from '@/i18n/navigation';
 
 export const Contact = () => {
   const t = useTranslations('Contact');

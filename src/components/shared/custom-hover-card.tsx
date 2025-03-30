@@ -1,5 +1,5 @@
-import { CalendarIcon } from '@/components/icons/calendar';
 import { ArrowUpRightIcon } from '@/components/icons/arrowUpRight';
+import { CalendarIcon } from '@/components/icons/calendar';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import {
   HoverCard,

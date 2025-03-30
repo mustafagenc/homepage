@@ -1,3 +1,5 @@
+import { getTranslations } from 'next-intl/server';
+
 import { BlogCard } from '@/components/blogs/blog-card';
 import {
   PAGE_QUERY_PARAM,
@@ -5,7 +7,6 @@ import {
   SEARCH_QUERY_PARAM,
 } from '@/lib/constants';
 import { IBlogCardMetadata } from '@/types/iBlog';
-import { getTranslations } from 'next-intl/server';
 
 interface BlogsProps {
   blogsWithMeta: IBlogCardMetadata[];

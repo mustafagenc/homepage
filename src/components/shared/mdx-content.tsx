@@ -1,6 +1,6 @@
-import { highlight } from 'sugar-high';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { highlight } from 'sugar-high';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function Code({ children, ...props }: any) {
