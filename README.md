@@ -1,6 +1,6 @@
-# Mustafa Genç
+# Homepage
 
-[![CodeFactor](https://www.codefactor.io/repository/github/mustafagenc/homepage/badge)](https://www.codefactor.io/repository/github/mustafagenc/homepage)
+[![CodeFactor](https://www.codefactor.io/repository/github/mustafagenc/homepage/badge)](https://www.codefactor.io/repository/github/mustafagenc/homepage) ![License](https://img.shields.io/github/license/mustafagenc/homepage?label=License) [![HelpWanted](https://img.shields.io/badge/Help%20Wanted-Contribute-blue)](https://github.com/mustafagenc/homepage/issues?q=is:issue+is:open+label:%22%F0%9F%99%8B%F0%9F%8F%BB%E2%80%8D%E2%99%82%EF%B8%8Fhelp+wanted%22) [![Github Star](https://img.shields.io/github/stars/mustafagenc/homepage)](https://github.com/mustafagenc/homepage/stargazers)
 
 This repository contains the source code for my personal website built with Next.js. Visit my website to learn more about my work and experiences.
 
@@ -8,30 +8,38 @@ This repository contains the source code for my personal website built with Next
 [Report Bug](https://github.com/mustafagenc/homepage/issues) ·
 [Request Feature](https://github.com/mustafagenc/homepage/issues)
 
-## 🛠️ Installation
+## 🪄 Stack
 
-- **Clone the Repository**
+- [`Next.js`](https://nextjs.org/)
+- [`TypeScript`](https://www.typescriptlang.org/)
+- [`React.js`](https://react.dev/)
+- [`TailwindCSS`](https://tailwindcss.com/)
+- [`GraphQL`](https://graphql.org)
+- [`Vercel`](https://vercel.com/)
+- [`Hashnode`](https://hashnode.com/)
+- [`Resend`](https://resend.com/)
+- [`Cal.com`](https://cal.com)
 
-  ```bash
-  git clone https://github.com/mustafagenc/homepage.git
-  ```
+## 🛠️ Run project locally
 
-- **Navigate to the Directory**
+Run the following command on your local environment:
 
-  ```bash
-  cd homepage
-  ```
+```bash
+git clone https://github.com/mustafagenc/homepage.git
 
-- **Install Dependencies & Start Developement Server**
+cd homepage
 
-  ```bash
-  yarn & yarn dev
-  ```
+yarn
+```
+
+Then, you can run the project locally in development mode with live reload by executing:
+
+```bash
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your favorite browser to see your project.
 
 ## 💬 Contact
 
 Please feel free to contact me at [mustafagenc.info/contact](https://mustafagenc.info/contact)
-
-## 🛡️ License
-
-Distributed under the MIT License. See the [license](LICENSE.md) for more information.
