@@ -20,7 +20,8 @@
   },
   "NotFound": {
     "title": "404",
-    "subtitle": "Page not found"
+    "description": "Oops! The page you're looking for has vanished into thin air... or maybe it never existed! 🚀 🔍",
+    "go-back": "Go Back Home"
   },
   "Footer": {
     "copyright": "\u00A9 {date} Mustafa Genc"
