@@ -23,7 +23,7 @@
     "subtitle": "Page not found"
   },
   "Footer": {
-    "copyright": "\u00A9 {date} Mustafa Genç"
+    "copyright": "\u00A9 {date} Mustafa Genc"
   },
   "Home": {
     "Metadata": {
@@ -61,7 +61,7 @@
       "description": "Collection of my selected public repositories fetched through GitHub Actions."
     },
     "title": "Projects",
-    "search-projects": "İsme veya dile göre projeleri ara...",
+    "search-projects": "Search projects by name or language...",
     "no-results-found": "No results found",
     "recent-projects": "Recent Projects",
     "all-projects": "All Projects",
@@ -90,11 +90,11 @@
     "book-a-meet": "Schedule a meeting",
     "privacy": "By submitting this form, I agree to the <PrivacyPolicy>privacy policy</PrivacyPolicy>.",
     "name": "Ad",
-    "enter-your-name": "Adınızı girin...",
+    "enter-your-name": "Enter your name...",
     "email": "E-posta",
-    "enter-your-email": "E-posta girin...",
+    "enter-your-email": "Enter your e-mail...",
     "message": "Mesaj",
-    "enter-your-message": "Mesaj girin...",
+    "enter-your-message": "Enter your message...",
     "name-is-required": "Name is required.",
     "must-be-at-least-2": "Must be at least 2 characters.",
     "email-is-required": "Email is required.",
