@@ -1,15 +1,16 @@
 'use client';
 
-import { buttonVariants } from '@/components/ui/button';
-import { ArrowLeftIcon } from '@/components/icons/arrowLeft';
+import { useTranslations } from 'next-intl';
 import { useSearchParams } from 'next/navigation';
+
+import { ArrowLeftIcon } from '@/components/icons/arrowLeft';
+import { buttonVariants } from '@/components/ui/button';
+import { Link } from '@/i18n/navigation';
 import {
   PAGE_QUERY_PARAM,
   PER_PAGE_QUERY_PARAM,
   SEARCH_QUERY_PARAM,
 } from '@/lib/constants';
-import { Link } from '@/i18n/navigation';
-import { useTranslations } from 'next-intl';
 import { capitalizeFirstLetter } from '@/lib/utils';
 
 interface BackButtonProps {

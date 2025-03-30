@@ -1,12 +1,13 @@
-import path from 'path';
 import fs from 'fs';
-import { IProject, IProjectMetadata } from '@/types/iProject';
 import matter from 'gray-matter';
+import path from 'path';
+
 import {
   PAGE_INDEX_DEFAULT,
   PROJECT_FILTER_TOPIC,
   PROJECTS_PER_PAGE_DEFAULT,
 } from '@/lib/constants';
+import { IProject, IProjectMetadata } from '@/types/iProject';
 
 class ProjectError extends Error {
   constructor(

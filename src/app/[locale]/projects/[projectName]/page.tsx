@@ -1,17 +1,18 @@
+import { getFormatter, getTranslations } from 'next-intl/server';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import { Suspense } from 'react';
+
 import { AlertIcon } from '@/components/icons/alert';
 import { ArrowLeftIcon } from '@/components/icons/arrowLeft';
 import { ArrowUpRightIcon } from '@/components/icons/arrowUpRight';
 import { BackButton } from '@/components/shared/back-button';
 import MDXContent from '@/components/shared/mdx-content';
+import { UserAvatar } from '@/components/shared/user-avatar';
 import { Badge, badgeVariants } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { UserAvatar } from '@/components/shared/user-avatar';
 import { BASE_URL, PROJECT_FILTER_TOPIC } from '@/lib/constants';
 import { getProjectByTitle } from '@/lib/projects';
-import Link from 'next/link';
-import { notFound } from 'next/navigation';
-import { Suspense } from 'react';
-import { getFormatter, getTranslations } from 'next-intl/server';
 
 type Params = Promise<{ projectName: string; locale: string }>;
 

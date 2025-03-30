@@ -2,11 +2,10 @@ import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 
 import { Contact } from '@/components/contact/contact';
+import { NewsletterForm } from '@/components/contact/newsletter-form';
 import { PUBLIC_MAIL } from '@/lib/constants';
 
 import type { Metadata } from 'next';
-import { NewsletterForm } from '@/components/contact/newsletter-form';
-
 type Params = Promise<{ locale: string }>;
 
 export async function generateMetadata({

@@ -1,7 +1,20 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { useState } from 'react';
+import { SubmitHandler, useForm } from 'react-hook-form';
+
+import { FilterIcon } from '@/components/icons/filter';
 import { Button } from '@/components/ui/button';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import {
   Popover,
@@ -9,29 +22,17 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 import {
-  Form,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
-} from '@/components/ui/form';
-import { SubmitHandler, useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import {
-  FilterFormSchema,
-  TFilterFormSchema,
-} from '@/lib/validators/filter-form';
-import {
   PAGE_INDEX_DEFAULT,
   PAGE_MAX,
   PAGE_QUERY_PARAM,
   PER_PAGE_MAX,
   PER_PAGE_QUERY_PARAM,
 } from '@/lib/constants';
-import { useState } from 'react';
-import { FilterIcon } from '@/components/icons/filter';
-import { useTranslations } from 'next-intl';
+import {
+  FilterFormSchema,
+  TFilterFormSchema,
+} from '@/lib/validators/filter-form';
+import { zodResolver } from '@hookform/resolvers/zod';
 
 interface FilterDropdownProps {
   endpoint: 'blogs' | 'projects';

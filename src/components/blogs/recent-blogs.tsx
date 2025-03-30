@@ -1,7 +1,8 @@
+import { useTranslations } from 'next-intl';
+
 import { Blogs } from '@/components/blogs/blogs';
 import { Link } from '@/i18n/navigation';
 import { IBlogCardMetadata } from '@/types/iBlog';
-import { useTranslations } from 'next-intl';
 
 interface RecentPostsProps {
   blogPosts: IBlogCardMetadata[];

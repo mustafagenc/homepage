@@ -1,7 +1,8 @@
-import Link from 'next/link';
-import { IProjectMetadata } from '@/types/iProject';
-import { Projects } from '@/components/projects/projects';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
+
+import { Projects } from '@/components/projects/projects';
+import { IProjectMetadata } from '@/types/iProject';
 
 interface RecentProjectsProps {
   projectsMeta: IProjectMetadata[];

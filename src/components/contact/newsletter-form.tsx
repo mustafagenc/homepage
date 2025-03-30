@@ -16,13 +16,13 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
+import { Link } from '@/i18n/navigation';
 import { saveContactsResend } from '@/lib/apis/resend';
 import {
   NewsletterFormSchema,
   TNewsletterFormSchema,
 } from '@/lib/validators/newsletter-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Link } from '@/i18n/navigation';
 
 export const NewsletterForm = () => {
   const t = useTranslations('Contact');

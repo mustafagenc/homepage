@@ -1,10 +1,11 @@
+import { useTranslations } from 'next-intl';
+
+import { Link } from '@/i18n/navigation';
 import {
   PAGE_QUERY_PARAM,
   PER_PAGE_QUERY_PARAM,
   SEARCH_QUERY_PARAM,
 } from '@/lib/constants';
-import { Link } from '@/i18n/navigation';
-import { useTranslations } from 'next-intl';
 
 interface PaginationControlProps {
   searchTerm?: string;

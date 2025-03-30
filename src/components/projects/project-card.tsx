@@ -1,5 +1,12 @@
 'use client';
 
+import { useFormatter, useTranslations } from 'next-intl';
+
+import { ArrowUpRightIcon } from '@/components/icons/arrowUpRight';
+import { GitHubIcon } from '@/components/icons/github';
+import { UserAvatar } from '@/components/shared/user-avatar';
+import { Badge } from '@/components/ui/badge';
+import { buttonVariants } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -8,20 +15,14 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { IProjectMetadata } from '@/types/iProject';
-import { Badge } from '@/components/ui/badge';
-import { buttonVariants } from '@/components/ui/button';
-import { GitHubIcon } from '@/components/icons/github';
-import { ArrowUpRightIcon } from '@/components/icons/arrowUpRight';
-import { UserAvatar } from '@/components/shared/user-avatar';
+import { Link, useRouter } from '@/i18n/navigation';
 import {
   PAGE_INDEX_DEFAULT,
   PAGE_QUERY_PARAM,
   PER_PAGE_QUERY_PARAM,
   SEARCH_QUERY_PARAM,
 } from '@/lib/constants';
-import { Link, useRouter } from '@/i18n/navigation';
-import { useFormatter, useTranslations } from 'next-intl';
+import { IProjectMetadata } from '@/types/iProject';
 
 interface ProjectCardProps {
   projectMetadata: IProjectMetadata;

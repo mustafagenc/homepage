@@ -1,19 +1,18 @@
 import { getTranslations } from 'next-intl/server';
 
-import { Intro } from '@/components/home/intro';
+import RecentBlogs from '@/components/blogs/recent-blogs';
 import { NewsletterForm } from '@/components/contact/newsletter-form';
+import { Intro } from '@/components/home/intro';
+import RecentProjects from '@/components/projects/recent-projects';
 import { Socials } from '@/components/shared/socials';
+import { getBlogPostsCardMeta } from '@/lib/apis/hashnode';
 import {
   BASE_URL,
   PAGE_INDEX_DEFAULT,
   RECENT_BLOGS_DEFAULT,
   RECENT_PROJECTS_DEFAULT,
 } from '@/lib/constants';
-
-import { getBlogPostsCardMeta } from '@/lib/apis/hashnode';
-import RecentBlogs from '@/components/blogs/recent-blogs';
 import { getProjectsMetadata } from '@/lib/projects';
-import RecentProjects from '@/components/projects/recent-projects';
 
 type Params = Promise<{ locale: string }>;
 

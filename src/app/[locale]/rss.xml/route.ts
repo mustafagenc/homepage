@@ -1,9 +1,9 @@
+import { getLocale, getTranslations } from 'next-intl/server';
+import RSS from 'rss';
+
 import { getBlogPostsCardMeta } from '@/lib/apis/hashnode';
 import { BASE_URL, PUBLIC_MAIL } from '@/lib/constants';
 import { getProjectsMetadata } from '@/lib/projects';
-import { getTranslations } from 'next-intl/server';
-import RSS from 'rss';
-import { getLocale } from 'next-intl/server';
 
 export async function GET() {
   const locale = await getLocale();

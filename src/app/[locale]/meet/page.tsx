@@ -1,9 +1,9 @@
-import { CalMeet } from '@/components/contact/cal-meet';
-
-import type { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 
+import { CalMeet } from '@/components/contact/cal-meet';
+
+import type { Metadata } from 'next';
 type Params = Promise<{ locale: string }>;
 
 export async function generateMetadata({
