@@ -9,7 +9,7 @@ export const UserAvatar = ({ className, src }: UserAvatarProps) => {
   return (
     <Avatar className={`size-8 ${className}`}>
       <AvatarImage
-        src={src ? src : '/images/mustafa-genc.jpg'}
+        src={src ? src : '/images/mustafa-genc.webp'}
         alt="Mustafa Genç @mustafagenc"
       />
       <AvatarFallback>MG</AvatarFallback>

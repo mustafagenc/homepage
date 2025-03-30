@@ -14,7 +14,7 @@ export async function GET() {
     description: t('description'),
     site_url: new URL(BASE_URL).toString(),
     feed_url: new URL('/rss.xml', BASE_URL).toString(),
-    image_url: new URL('/images/mustafa-genc.jpg', BASE_URL).toString(),
+    image_url: new URL('/images/mustafa-genc.webp', BASE_URL).toString(),
     author: t('author', { email: PUBLIC_MAIL }),
     copyright: t('copyright', { date: new Date().getFullYear() }),
     pubDate: new Date('2025-03-29T00:00:00Z'),

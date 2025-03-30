@@ -38,7 +38,7 @@ export const Intro = () => {
                   title="ENKA İnşaat ve Sanayi A.Ş."
                   description={t('enka')}
                   dateText={t('enka-date')}
-                  avatarSrc="/images/enka.png"
+                  avatarSrc="/images/enka.webp"
                   avatarFallback="FCC"
                   extenalLink="https://www.enka.com/"
                 />
@@ -49,7 +49,7 @@ export const Intro = () => {
                   title="EGEM"
                   description={t('egem')}
                   dateText={t('egem-date')}
-                  avatarSrc="/images/egem.png"
+                  avatarSrc="/images/egem.webp"
                   avatarFallback="FCC"
                   extenalLink="https://www.enkasystems.com/solutions/egem-global-equipment-management-system/"
                 />
@@ -62,7 +62,7 @@ export const Intro = () => {
         <div className="hidden md:block">
           <Image
             className="rounded-full"
-            src="/images/mustafa-genc.jpg"
+            src="/images/mustafa-genc.webp"
             alt="Profile photo of Mustafa Genç"
             width={175}
             height={175}
