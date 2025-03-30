@@ -86,7 +86,7 @@ jobs:
 
           # Commit if there are any changes
           if ! git diff --cached --quiet; then
-            git commit -m "Update READMEs with meta and content from public repos"
+            git commit -m "Update READMEs with metadata and content from public repositories."
             git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/mustafagenc/homepage.git HEAD:main
           else
             echo "No changes to commit."
