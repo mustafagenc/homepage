@@ -21,8 +21,8 @@ import {
   PER_PAGE_QUERY_PARAM,
   SEARCH_QUERY_PARAM,
 } from '@/lib/constants';
-import { IProjectMetadata } from '@/types/iProject';
 import { capitalizeFirstLetter } from '@/lib/utils';
+import { IProjectMetadata } from '@/types/iProject';
 
 interface ProjectCardProps {
   projectMetadata: IProjectMetadata;

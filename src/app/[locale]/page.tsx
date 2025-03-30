@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 
 import RecentBlogs from '@/components/blogs/recent-blogs';
+import { Raindrop } from '@/components/bookmarks/raindrop';
 import { NewsletterForm } from '@/components/contact/newsletter-form';
 import { Intro } from '@/components/home/intro';
 import RecentProjects from '@/components/projects/recent-projects';
@@ -13,7 +14,6 @@ import {
   RECENT_PROJECTS_DEFAULT,
 } from '@/lib/constants';
 import { getProjectsMetadata } from '@/lib/projects';
-import { Raindrop } from '@/components/bookmark/raindrop';
 
 type Params = Promise<{ locale: string }>;
 

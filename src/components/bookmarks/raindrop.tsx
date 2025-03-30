@@ -1,8 +1,10 @@
+import { getTranslations } from 'next-intl/server';
+import Image from 'next/image';
+
 import { Link } from '@/i18n/navigation';
 import { getBookmark } from '@/lib/apis/raindrop';
 import { ILink } from '@/types/iLink';
-import { getTranslations } from 'next-intl/server';
-import Image from 'next/image';
+
 import { Badge } from '../ui/badge';
 
 export const Raindrop = async () => {
