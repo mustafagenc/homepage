@@ -13,6 +13,7 @@ import { Badge, badgeVariants } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { BASE_URL, PROJECT_FILTER_TOPIC } from '@/lib/constants';
 import { getProjectByTitle } from '@/lib/projects';
+import { Separator } from '@/components/ui/separator';
 
 type Params = Promise<{ projectName: string; locale: string }>;
 
@@ -110,7 +111,6 @@ export default async function Page(props: { params: Params }) {
               {title}
             </a>
           </h1>
-
           <div className="mt-3 flex items-center">
             <Link href="/contact" className="flex items-center">
               <UserAvatar className="size-8 sm:mr-2" />
@@ -152,8 +152,8 @@ export default async function Page(props: { params: Params }) {
             </div>
           )}
         </header>
-
-        <main className="prose mt-12 max-w-3xl dark:prose-invert">
+        <main className="prose max-w-3xl dark:prose-invert">
+          <Separator style={{ margin: '30px 0 20px 0' }} />
           {content.trim().length > 0 ? (
             <MDXContent projectName={projectName} source={content} />
           ) : (

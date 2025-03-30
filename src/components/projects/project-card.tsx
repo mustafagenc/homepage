@@ -4,7 +4,6 @@ import { useFormatter, useTranslations } from 'next-intl';
 
 import { ArrowUpRightIcon } from '@/components/icons/arrowUpRight';
 import { GitHubIcon } from '@/components/icons/github';
-import { UserAvatar } from '@/components/shared/user-avatar';
 import { Badge } from '@/components/ui/badge';
 import { buttonVariants } from '@/components/ui/button';
 import {
@@ -23,6 +22,7 @@ import {
   SEARCH_QUERY_PARAM,
 } from '@/lib/constants';
 import { IProjectMetadata } from '@/types/iProject';
+import { capitalizeFirstLetter } from '@/lib/utils';
 
 interface ProjectCardProps {
   projectMetadata: IProjectMetadata;
@@ -39,15 +39,8 @@ export const ProjectCard = ({
 }: ProjectCardProps) => {
   const router = useRouter();
   const t = useTranslations('Projects');
-  const {
-    title,
-    author,
-    clone_url,
-    homepage,
-    description,
-    language,
-    created_at,
-  } = projectMetadata;
+  const { title, clone_url, homepage, description, language, created_at } =
+    projectMetadata;
 
   const format = useFormatter();
   const formattedCreatedDate = format.dateTime(new Date(created_at), {
@@ -93,32 +86,21 @@ export const ProjectCard = ({
               }}
               className="hover:underline hover:underline-offset-4"
             >
-              {title}
+              {capitalizeFirstLetter(title)}
             </Link>
           </div>
-
           <span className="divider hidden text-sm font-light sm:inline">
             {formattedCreatedDate}
           </span>
         </CardTitle>
         <CardDescription className="flex text-sm text-zinc-700 dark:text-zinc-400">
-          <div className="mt-3 flex items-center">
-            <Link href="/contact" className="flex items-center">
-              <UserAvatar className="mr-2 size-8" />
-              {author ? (
-                <span className="hidden font-semibold hover:underline hover:underline-offset-2 sm:inline">
-                  {author}
-                </span>
-              ) : null}
-            </Link>
-
+          <div className="flex items-center">
             <div className="flex items-center text-sm">
               {language ? (
                 <>
-                  <span className="divider mr-1 sm:mx-1">•</span>
                   <Badge
                     variant="secondary"
-                    className="ml-1 cursor-pointer text-zinc-600 hover:text-zinc-800 dark:text-zinc-300 dark:hover:text-zinc-400"
+                    className="mr-1 cursor-pointer text-zinc-600 hover:text-zinc-800 dark:text-zinc-300 dark:hover:text-zinc-400"
                     onClick={() => handleBadgeClick(language)}
                   >
                     {language}
