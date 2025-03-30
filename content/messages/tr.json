@@ -21,7 +21,7 @@
   "NotFound": {
     "title": "404",
     "description": "Eyvah! Aradığınız sayfa kayıplara karışmış. Belki de hiç var olmamıştır! 🚀 🔍",
-    "go-back":"Geri Dön"
+    "go-back": "Geri Dön"
   },
   "Footer": {
     "copyright": "\u00A9 {date} Mustafa Genç"
