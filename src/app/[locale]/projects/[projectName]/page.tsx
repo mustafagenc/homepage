@@ -11,9 +11,9 @@ import MDXContent from '@/components/shared/mdx-content';
 import { UserAvatar } from '@/components/shared/user-avatar';
 import { Badge, badgeVariants } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { Separator } from '@/components/ui/separator';
 import { BASE_URL, PROJECT_FILTER_TOPIC } from '@/lib/constants';
 import { getProjectByTitle } from '@/lib/projects';
-import { Separator } from '@/components/ui/separator';
 
 type Params = Promise<{ projectName: string; locale: string }>;
 

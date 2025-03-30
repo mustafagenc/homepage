@@ -1,112 +1,46 @@
-import { ILink } from '@/types/iLink';
+import 'server-only';
 
-type InitData = { token?: string };
-
-type Result = {
-  result: boolean;
-  count: number;
-  collectionId: number;
-  items: ILink[];
+const options = {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+    Authorization: `Bearer ${process.env.NEXT_PUBLIC_RAINDROP_ACCESS_TOKEN}`,
+  },
 };
 
-export default class Raindrop {
-  private readonly token: string =
-    process.env.RAINDROP_ACCESS_TOKEN ??
-    (() => {
-      throw new Error('RAINDROP_ACCESS_TOKEN is not defined');
-    })();
-  private url = 'https://api.raindrop.io';
+const RAINDROP_API_URL = 'https://api.raindrop.io/rest/v1';
 
-  constructor(initData?: InitData) {
-    this.token = initData?.token ?? this.token;
+export const getCollections = async () => {
+  try {
+    const response = await fetch(`${RAINDROP_API_URL}/collections`, options);
+    const collections = await response.json();
+    return collections;
+  } catch (error) {
+    console.info(error);
+    return null;
   }
+};
 
-  async fetch({
-    url,
-    options = {},
-  }: {
-    url: URL;
-    options?: RequestInit;
-  }): Promise<Response> {
-    return fetch(url, {
-      method: 'GET',
-      ...options,
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${process.env.RAINDROP_ACCESS_TOKEN}`,
-        ...options?.headers,
-      },
-    });
+export const getBookmark = async (
+  id: number,
+  perPage: string = '3',
+  pageIndex: string = '0'
+) => {
+  try {
+    const response = await fetch(
+      `${RAINDROP_API_URL}/raindrops/${id}?` +
+        new URLSearchParams({
+          page: pageIndex,
+          perpage: perPage,
+        }),
+      options
+    );
+    return await response.json();
+  } catch (error) {
+    console.info(error);
+    return null;
   }
-
-  private mergeParams(url: URL, obj: Record<string, string | undefined>): void {
-    Object.keys(obj)
-      .filter((key) => obj[key] !== undefined)
-      .forEach((key) => {
-        url.searchParams.append(key, obj[key] as string);
-      });
-  }
-
-  private normalizeData(data: ILink[]) {
-    return data.map((bookmark) => {
-      const { _id, type, created, title, link, excerpt, domain, tags, cover } =
-        bookmark;
-      return { _id, type, created, title, link, excerpt, domain, tags, cover };
-    });
-  }
-
-  // https://api.raindrop.io/rest/v1/raindrops/{collectionId}
-  public async multipleRaindrops({
-    id,
-    perPage = 50,
-    page = 0,
-    sort = '-created',
-    search,
-    allData = false,
-  }: {
-    id: number;
-    perPage?: number;
-    page?: number;
-    sort?:
-      | '-created'
-      | 'created'
-      | '-sort'
-      | '-title'
-      | 'title'
-      | '-domain'
-      | 'domain';
-    search?: string;
-    allData?: boolean;
-  }): Promise<ILink[]> {
-    const url = new URL(`/rest/v1/raindrops/${id}`, this.url);
-    this.mergeParams(url, {
-      perpage: perPage?.toString(),
-      page: page?.toString(),
-      search,
-      sort,
-    });
-
-    const response = await this.fetch({ url });
-    const data: Result = await response.json();
-
-    if (!allData) return this.normalizeData(data.items);
-
-    if (data.items.length === perPage) {
-      return data.items.concat(
-        await this.multipleRaindrops({
-          id,
-          page: page + 1,
-          perPage,
-          sort,
-          search,
-          allData,
-        })
-      );
-    } else {
-      return this.normalizeData(data.items);
-    }
-  }
-}
+};
 
 // https://api.raindrop.io/rest/v1/collections
 // https://api.raindrop.io/rest/v1/collection/{id}

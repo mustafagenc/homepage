@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 
 import RecentBlogs from '@/components/blogs/recent-blogs';
+import { Raindrop } from '@/components/bookmarks/raindrop';
 import { NewsletterForm } from '@/components/contact/newsletter-form';
 import { Intro } from '@/components/home/intro';
 import RecentProjects from '@/components/projects/recent-projects';
@@ -55,6 +56,7 @@ export default async function Page() {
       <Socials />
       <RecentBlogs blogPosts={blogs} />
       <RecentProjects projectsMeta={projects} />
+      <Raindrop />
       <NewsletterForm />
     </>
   );
