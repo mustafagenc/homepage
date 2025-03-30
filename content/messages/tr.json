@@ -20,7 +20,8 @@
   },
   "NotFound": {
     "title": "404",
-    "subtitle": "Sayfa bulunamadı"
+    "description": "Eyvah! Aradığınız sayfa kayıplara karışmış. Belki de hiç var olmamıştır! 🚀 🔍",
+    "go-back":"Geri Dön"
   },
   "Footer": {
     "copyright": "\u00A9 {date} Mustafa Genç"
