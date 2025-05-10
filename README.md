@@ -1,5 +1,7 @@
 # Homepage
 
+[![Support Palestine](https://raw.githubusercontent.com/mustafagenc/palestine/refs/heads/main/banners/b-2.svg)](https://github.com/mustafagenc/palestine/blob/main/Support.md)
+
 [![CodeFactor](https://www.codefactor.io/repository/github/mustafagenc/homepage/badge)](https://www.codefactor.io/repository/github/mustafagenc/homepage) [![HelpWanted](https://img.shields.io/badge/Help%20Wanted-Contribute-blue)](https://github.com/mustafagenc/homepage/issues?q=is:issue+is:open+label:%22%F0%9F%99%8B%F0%9F%8F%BB%E2%80%8D%E2%99%82%EF%B8%8Fhelp+wanted%22) [![Commit Per Month](https://img.shields.io/github/commit-activity/m/mustafagenc/homepage?)](https://github.com/mustafagenc/homepage/commits/main) [![Last Commit](https://img.shields.io/github/last-commit/mustafagenc/homepage?)](https://github.com/mustafagenc/homepage/commits/main) ![License](https://img.shields.io/github/license/mustafagenc/homepage?label=License) [![Github Star](https://img.shields.io/github/stars/mustafagenc/homepage)](https://github.com/mustafagenc/homepage/stargazers)
 
 This repository contains the source code for my personal website built with Next.js. Visit my website to learn more about my work and experiences.
