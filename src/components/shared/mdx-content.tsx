@@ -1,14 +1,7 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { highlight } from 'sugar-high';
+import rehypeRaw from 'rehype-raw'
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function Code({ children, ...props }: any) {
-  const codeHTML = highlight(children);
-  return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
-}
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function CustomLink({ projectName, ...props }: any) {
   const href = String(props?.href);
   if (href.startsWith('#')) {
@@ -16,6 +9,7 @@ function CustomLink({ projectName, ...props }: any) {
       <a
         {...props}
         target="_blank"
+        rel="noopener noreferrer"
         href={`https://github.com/mustafagenc/${projectName}/${href}`}
         className="underline underline-offset-4"
       />
@@ -40,8 +34,8 @@ export default function MDXContent({ source, projectName }: MDXContentProps) {
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}
+      rehypePlugins={[rehypeRaw]}
       components={{
-        code: Code,
         a: (props) => <CustomLink projectName={projectName} {...props} />,
       }}
     >
