@@ -22,7 +22,7 @@ export const PaginationControls = ({
 
     return (
         <nav aria-label="Pagination" className="mt-3 flex justify-between">
-            {currentPage > 1 && (currentPage < totalPages || currentPage === totalPages) ? (
+            {currentPage > 1 && (currentPage <= totalPages) ? (
                 <Link
                     href={{
                         pathname: endpoint,
