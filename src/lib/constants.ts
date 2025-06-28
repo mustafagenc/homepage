@@ -6,13 +6,13 @@ import { LinkedInIcon } from '@/components/icons/linkedin';
 import { TwitterIcon } from '@/components/icons/twitter';
 
 export const BASE_URL =
-  process.env.NODE_ENV === 'development'
-    ? 'http://localhost:3000'
-    : 'https://www.mustafagenc.info';
+    process.env.NODE_ENV === 'development'
+        ? 'http://localhost:3000'
+        : 'https://www.mustafagenc.info';
 
 export const locales = [
-  { id: 'tr', name: 'Türkçe' },
-  { id: 'en', name: 'English' },
+    { id: 'tr', name: 'Türkçe' },
+    { id: 'en', name: 'English' },
 ];
 
 export const PUBLIC_MAIL = 'eposta@mustafagenc.info';
@@ -44,65 +44,65 @@ export const HASHNODE_BLOGS_FETCH_LIMIT = 15;
 export const PROJECT_FILTER_TOPIC = 'showcase';
 
 export const ROUTES = [
-  '',
-  '/blogs',
-  // '/work',
-  '/contact',
-  '/privacy',
-  '/meet',
+    '',
+    '/blogs',
+    // '/work',
+    '/contact',
+    '/privacy',
+    '/meet',
 ];
 
 export const NAV_LINKS = [
-  { name: 'home', path: '/' },
-  { name: 'projects', path: '/projects/' },
-  // { name: 'work', path: '/work/' },
-  { name: 'contact', path: '/contact/' },
+    { name: 'home', path: '/' },
+    { name: 'projects', path: '/projects/' },
+    // { name: 'work', path: '/work/' },
+    { name: 'contact', path: '/contact/' },
 ];
 
 export const socialMediaLinks = [
-  {
-    name: 'social-media',
-    items: [
-      {
-        name: 'LinkedIn',
-        href: 'https://www.linkedin.com/in/mustafagenc',
-        icon: LinkedInIcon,
-      },
-      {
-        name: 'GitHub',
-        href: 'https://github.com/mustafagenc',
-        icon: GitHubIcon,
-      },
-      {
-        name: 'DEV.to',
-        href: 'https://dev.to/mustafagenc',
-        icon: DevToIcon,
-      },
-      {
-        name: 'Hashnode',
-        href: 'https://mustafagenc.hashnode.dev',
-        icon: HashnodeIcon,
-      },
-      {
-        name: 'X',
-        href: 'https://x.com/mustafagenc',
-        icon: TwitterIcon,
-      },
-      {
-        name: 'Instagram',
-        href: 'https://instagram.com/mustafagenc',
-        icon: InstagramIcon,
-      },
-    ],
-  },
-  // {
-  //   name: 'projects',
-  //   items: [
-  //     {
-  //       name: 'Namaz Vakti',
-  //       href: 'https://namazvakti.app',
-  //       icon: MoonIcon,
-  //     },
-  //   ],
-  // },
+    {
+        name: 'social-media',
+        items: [
+            {
+                name: 'LinkedIn',
+                href: 'https://www.linkedin.com/in/mustafagenc',
+                icon: LinkedInIcon,
+            },
+            {
+                name: 'GitHub',
+                href: 'https://github.com/mustafagenc',
+                icon: GitHubIcon,
+            },
+            {
+                name: 'DEV.to',
+                href: 'https://dev.to/mustafagenc',
+                icon: DevToIcon,
+            },
+            {
+                name: 'Hashnode',
+                href: 'https://mustafagenc.hashnode.dev',
+                icon: HashnodeIcon,
+            },
+            {
+                name: 'X',
+                href: 'https://x.com/mustafagenc',
+                icon: TwitterIcon,
+            },
+            {
+                name: 'Instagram',
+                href: 'https://instagram.com/mustafagenc',
+                icon: InstagramIcon,
+            },
+        ],
+    },
+    // {
+    //   name: 'projects',
+    //   items: [
+    //     {
+    //       name: 'Namaz Vakti',
+    //       href: 'https://namazvakti.app',
+    //       icon: MoonIcon,
+    //     },
+    //   ],
+    // },
 ];

@@ -1,157 +1,157 @@
 {
-  "Shared": {
-    "loading": "Loading...",
-    "notPlaying": "Not Playing",
-    "back-to": "Back to {endpoint}",
-    "previous": "Previous",
-    "next": "Next",
-    "apply": "Apply",
-    "reset-filters": "Reset Filters",
-    "per-page": "Per Page",
-    "page": "Page",
-    "filter": "Filter"
-  },
-  "Navbar": {
-    "home": "Home",
-    "blogs": "Blogs",
-    "projects": "Projects",
-    "work": "Work",
-    "contact": "Contact"
-  },
-  "NotFound": {
-    "title": "404",
-    "description": "Oops! The page you're looking for has vanished into thin air... or maybe it never existed! 🚀 🔍",
-    "go-back": "Go Back Home"
-  },
-  "Footer": {
-    "copyright": "\u00A9 {date} Mustafa Genc"
-  },
-  "Home": {
-    "Metadata": {
-      "title": "Mustafa Genç",
-      "description": "Explore my collection of GitHub projects, read my blog posts, and stay updated by subscribing to my newsletter for project and blog updates."
+    "Shared": {
+        "loading": "Loading...",
+        "notPlaying": "Not Playing",
+        "back-to": "Back to {endpoint}",
+        "previous": "Previous",
+        "next": "Next",
+        "apply": "Apply",
+        "reset-filters": "Reset Filters",
+        "per-page": "Per Page",
+        "page": "Page",
+        "filter": "Filter"
     },
-    "hey": "Hey, I'm Mustafa",
-    "title": "Full-Stack Developer.",
-    "description": "I have been working in software development for over 20 years. I specialize in .NET and web technologies and have successfully contributed to <Work>various projects</Work> across different industries. Currently, I am working as a Senior Software Developer at <enkacard>ENKA İnşaat ve Sanayi A.Ş.</enkacard>, where I am responsible for the development of <egemcard>EGEM</egemcard>.<br></br>",
-    "social-media": "Social Media",
-    "projects": "Projects",
-    "egem": "EGEM is a comprehensive platform that digitizes the management of machinery and equipment parks in the construction sector. It aims to increase operational efficiency and occupational safety by gathering critical processes such as equipment tracking, maintenance planning, malfunction management, fuel consumption monitoring, cost analysis, and reporting under a single roof.",
-    "egem-date": "Joined Jun 2019",
-    "enka": "ENKA, established in 1957, is an international construction and industrial giant. It also operates in the fields of energy, real estate, and manufacturing. It has undertaken major projects in Turkey and worldwide.",
-    "enka-date": "Joined Mar 2019"
-  },
-  "Blogs": {
-    "Metadata": {
-      "title": "Blogs",
-      "description": "Explore my collection of blog posts, where I share my ideas on coding, DevOps, cloud and more, powered by Hashnode Headless CMS."
+    "Navbar": {
+        "home": "Home",
+        "blogs": "Blogs",
+        "projects": "Projects",
+        "work": "Work",
+        "contact": "Contact"
     },
-    "title": "Blogs",
-    "back-to-blogs": "Back to blogs",
-    "no-results-found": "No results found",
-    "recent-blogs": "Recent blogs",
-    "all-blogs": "All blogs",
-    "search-blogs": "Search blogs by title or tags...",
-    "showing": "Showing {noOfBlogsShownAlready} of {length} blogs.",
-    "showing-page": "Page {pageQuery} of {totalPages}",
-    "read-time": "{readTimeInMinutes} min read"
-  },
-  "Projects": {
-    "Metadata": {
-      "title": "Projects",
-      "description": "Collection of my selected public repositories fetched through GitHub Actions."
+    "NotFound": {
+        "title": "404",
+        "description": "Oops! The page you're looking for has vanished into thin air... or maybe it never existed! 🚀 🔍",
+        "go-back": "Go Back Home"
     },
-    "title": "Projects",
-    "search-projects": "Search projects by name or language...",
-    "no-results-found": "No results found",
-    "recent-projects": "Recent Projects",
-    "all-projects": "All Projects",
-    "live-demo": "Live Demo",
-    "view-on-github": "View on GitHub",
-    "back-to-projects": "Back to projects",
-    "showing": "Showing {shown} of {total} projects.",
-    "showing-page": "Page {pageQuery} of {totalPages}"
-  },
-  "Work": {
-    "Metadata": {
-      "title": "Work",
-      "description": "Take a look at my professional journey, projects I’ve worked on, and my involvement with the community."
+    "Footer": {
+        "copyright": "\u00A9 {date} Mustafa Genc"
     },
-    "title": "Work"
-  },
-  "Contact": {
-    "Metadata": {
-      "title": "Contact",
-      "description": "Let’s connect! Whether you want to discuss a project, collaborate, or just say hi, feel free to reach out."
+    "Home": {
+        "Metadata": {
+            "title": "Mustafa Genç",
+            "description": "Explore my collection of GitHub projects, read my blog posts, and stay updated by subscribing to my newsletter for project and blog updates."
+        },
+        "hey": "Hey, I'm Mustafa",
+        "title": "Full-Stack Developer.",
+        "description": "I have been working in software development for over 20 years. I specialize in .NET and web technologies and have successfully contributed to <Work>various projects</Work> across different industries. Currently, I am working as a Senior Software Developer at <enkacard>ENKA İnşaat ve Sanayi A.Ş.</enkacard>, where I am responsible for the development of <egemcard>EGEM</egemcard>.<br></br>",
+        "social-media": "Social Media",
+        "projects": "Projects",
+        "egem": "EGEM is a comprehensive platform that digitizes the management of machinery and equipment parks in the construction sector. It aims to increase operational efficiency and occupational safety by gathering critical processes such as equipment tracking, maintenance planning, malfunction management, fuel consumption monitoring, cost analysis, and reporting under a single roof.",
+        "egem-date": "Joined Jun 2019",
+        "enka": "ENKA, established in 1957, is an international construction and industrial giant. It also operates in the fields of energy, real estate, and manufacturing. It has undertaken major projects in Turkey and worldwide.",
+        "enka-date": "Joined Mar 2019"
     },
-    "title": "Get in touch",
-    "description": "I'm open to freelance projects and collaborations. If you have a project, want to share ideas, or just feel like chatting, let's connect!<br></br>Feel free to reach out to me at <email></email> or through the contact form below.",
-    "contact-me": "Contact me",
-    "schedule-meeting": "Interested to chat on your ideas or work with me? Schedule a meeting using the button below.",
-    "book-a-meet": "Schedule a meeting",
-    "privacy": "By submitting this form, I agree to the <PrivacyPolicy>privacy policy</PrivacyPolicy>.",
-    "name": "Ad",
-    "enter-your-name": "Enter your name...",
-    "email": "E-posta",
-    "enter-your-email": "Enter your e-mail...",
-    "message": "Mesaj",
-    "enter-your-message": "Enter your message...",
-    "name-is-required": "Name is required.",
-    "must-be-at-least-2": "Must be at least 2 characters.",
-    "email-is-required": "Email is required.",
-    "email-is-invalid": "Email is invalid.",
-    "message-is-required": "Message is required.",
-    "Newsletter": {
-      "title": "Subscribe to my newsletter",
-      "subtitle": "Get recent projects \u0026 blog updates to your inbox.",
-      "email": "E-mail",
-      "button": "Subscribe",
-      "placeholder": "Enter your email...",
-      "privacy": "<PrivacyPolicy>Privacy policy</PrivacyPolicy>",
-      "error-saving-contact-to-resend": "Error saving contact to Resend:",
-      "make-sure-to-check-your-spam-folder": "Make sure to check your spam folder.",
-      "something-went-wrong": "Something went wrong!",
-      "you-might-already-be-subscribed": "You might already be subscribed."
+    "Blogs": {
+        "Metadata": {
+            "title": "Blogs",
+            "description": "Explore my collection of blog posts, where I share my ideas on coding, DevOps, cloud and more, powered by Hashnode Headless CMS."
+        },
+        "title": "Blogs",
+        "back-to-blogs": "Back to blogs",
+        "no-results-found": "No results found",
+        "recent-blogs": "Recent blogs",
+        "all-blogs": "All blogs",
+        "search-blogs": "Search blogs by title or tags...",
+        "showing": "Showing {noOfBlogsShownAlready} of {length} blogs.",
+        "showing-page": "Page {pageQuery} of {totalPages}",
+        "read-time": "{readTimeInMinutes} min read"
+    },
+    "Projects": {
+        "Metadata": {
+            "title": "Projects",
+            "description": "Collection of my selected public repositories fetched through GitHub Actions."
+        },
+        "title": "Projects",
+        "search-projects": "Search projects by name or language...",
+        "no-results-found": "No results found",
+        "recent-projects": "Recent Projects",
+        "all-projects": "All Projects",
+        "live-demo": "Live Demo",
+        "view-on-github": "View on GitHub",
+        "back-to-projects": "Back to projects",
+        "showing": "Showing {shown} of {total} projects.",
+        "showing-page": "Page {pageQuery} of {totalPages}"
+    },
+    "Work": {
+        "Metadata": {
+            "title": "Work",
+            "description": "Take a look at my professional journey, projects I’ve worked on, and my involvement with the community."
+        },
+        "title": "Work"
+    },
+    "Contact": {
+        "Metadata": {
+            "title": "Contact",
+            "description": "Let’s connect! Whether you want to discuss a project, collaborate, or just say hi, feel free to reach out."
+        },
+        "title": "Get in touch",
+        "description": "I'm open to freelance projects and collaborations. If you have a project, want to share ideas, or just feel like chatting, let's connect!<br></br>Feel free to reach out to me at <email></email> or through the contact form below.",
+        "contact-me": "Contact me",
+        "schedule-meeting": "Interested to chat on your ideas or work with me? Schedule a meeting using the button below.",
+        "book-a-meet": "Schedule a meeting",
+        "privacy": "By submitting this form, I agree to the <PrivacyPolicy>privacy policy</PrivacyPolicy>.",
+        "name": "Ad",
+        "enter-your-name": "Enter your name...",
+        "email": "E-posta",
+        "enter-your-email": "Enter your e-mail...",
+        "message": "Mesaj",
+        "enter-your-message": "Enter your message...",
+        "name-is-required": "Name is required.",
+        "must-be-at-least-2": "Must be at least 2 characters.",
+        "email-is-required": "Email is required.",
+        "email-is-invalid": "Email is invalid.",
+        "message-is-required": "Message is required.",
+        "Newsletter": {
+            "title": "Subscribe to my newsletter",
+            "subtitle": "Get recent projects \u0026 blog updates to your inbox.",
+            "email": "E-mail",
+            "button": "Subscribe",
+            "placeholder": "Enter your email...",
+            "privacy": "<PrivacyPolicy>Privacy policy</PrivacyPolicy>",
+            "error-saving-contact-to-resend": "Error saving contact to Resend:",
+            "make-sure-to-check-your-spam-folder": "Make sure to check your spam folder.",
+            "something-went-wrong": "Something went wrong!",
+            "you-might-already-be-subscribed": "You might already be subscribed."
+        }
+    },
+    "Meet": {
+        "Metadata": {
+            "title": "Schedule a Meet",
+            "description": "Interested to chat on your ideas or work with me? Schedule a meeting using the form below."
+        },
+        "title": "Schedule a Meet"
+    },
+    "Privacy": {
+        "Metadata": {
+            "title": "Privacy Policy",
+            "description": "This Privacy Policy explains how I collect, use, and protect your personal information to ensure your privacy is respected."
+        },
+        "title": "Privacy Policy",
+        "description": "This Privacy Policy explains how I collect, use, and protect the personal information you provide through the contact form on my website.",
+        "information-i-collect": "Information I Collect",
+        "information-i-collect-description": "When you fill out the contact form, I may collect your name, email address, and any other details you provide.",
+        "how-i-use-information": "How I Use Information",
+        "how-i-use-information-description": "I use the information you submit to respond to your inquiries and communicate with you as necessary.",
+        "how-i-protect-information": "How I Protect Information",
+        "how-i-protect-information-description": "I take reasonable measures to protect your personal data from unauthorized access, alteration, or disclosure. I utilize secure servers to store your data.",
+        "data-sharing-and-protection": "Data Sharing and Protection",
+        "data-sharing-and-protection-description": "I take reasonable measures to protect your personal data from unauthorized access, alteration, or disclosure. I utilize secure servers to store your data.",
+        "contact-details": "Contact Details",
+        "contact-details-description": "If you have any questions or concerns about this Privacy Policy, please contact me at <email></email>.",
+        "contact-me": "Contact me"
+    },
+    "RSS": {
+        "title": "Mustafa Genc",
+        "description": "Stay updated with the latest selected public GitHub repositories and blog posts from Mustafa Genc.",
+        "author": "{email} (Mustafa Genc)",
+        "copyright": "\u00A9 {date} Mustafa Genc",
+        "generator": "RSS Feed for Node and Next.js",
+        "blogby": "{title} blog by Mustafa Genc",
+        "projectby": "{title} project by Mustafa Genc",
+        "blog": "Blogs",
+        "project": "Projects"
+    },
+    "Bookmarks": {
+        "title": "Bookmarks"
     }
-  },
-  "Meet": {
-    "Metadata": {
-      "title": "Schedule a Meet",
-      "description": "Interested to chat on your ideas or work with me? Schedule a meeting using the form below."
-    },
-    "title": "Schedule a Meet"
-  },
-  "Privacy": {
-    "Metadata": {
-      "title": "Privacy Policy",
-      "description": "This Privacy Policy explains how I collect, use, and protect your personal information to ensure your privacy is respected."
-    },
-    "title": "Privacy Policy",
-    "description": "This Privacy Policy explains how I collect, use, and protect the personal information you provide through the contact form on my website.",
-    "information-i-collect": "Information I Collect",
-    "information-i-collect-description": "When you fill out the contact form, I may collect your name, email address, and any other details you provide.",
-    "how-i-use-information": "How I Use Information",
-    "how-i-use-information-description": "I use the information you submit to respond to your inquiries and communicate with you as necessary.",
-    "how-i-protect-information": "How I Protect Information",
-    "how-i-protect-information-description": "I take reasonable measures to protect your personal data from unauthorized access, alteration, or disclosure. I utilize secure servers to store your data.",
-    "data-sharing-and-protection": "Data Sharing and Protection",
-    "data-sharing-and-protection-description": "I take reasonable measures to protect your personal data from unauthorized access, alteration, or disclosure. I utilize secure servers to store your data.",
-    "contact-details": "Contact Details",
-    "contact-details-description": "If you have any questions or concerns about this Privacy Policy, please contact me at <email></email>.",
-    "contact-me": "Contact me"
-  },
-  "RSS": {
-    "title": "Mustafa Genc",
-    "description": "Stay updated with the latest selected public GitHub repositories and blog posts from Mustafa Genc.",
-    "author": "{email} (Mustafa Genc)",
-    "copyright": "\u00A9 {date} Mustafa Genc",
-    "generator": "RSS Feed for Node and Next.js",
-    "blogby": "{title} blog by Mustafa Genc",
-    "projectby": "{title} project by Mustafa Genc",
-    "blog": "Blogs",
-    "project": "Projects"
-  },
-  "Bookmarks": {
-    "title": "Bookmarks"
-  }
 }

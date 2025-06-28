@@ -8,56 +8,56 @@ import RecentProjects from '@/components/projects/recent-projects';
 import { Socials } from '@/components/shared/socials';
 // import { getBlogPostsCardMeta } from '@/lib/apis/hashnode';
 import {
-  BASE_URL,
-  PAGE_INDEX_DEFAULT,
-  // RECENT_BLOGS_DEFAULT,
-  RECENT_PROJECTS_DEFAULT,
+    BASE_URL,
+    PAGE_INDEX_DEFAULT,
+    // RECENT_BLOGS_DEFAULT,
+    RECENT_PROJECTS_DEFAULT,
 } from '@/lib/constants';
 import { getProjectsMetadata } from '@/lib/projects';
 
 type Params = Promise<{ locale: string }>;
 
 export async function generateMetadata({ params }: { params: Params }) {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'Home' });
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: 'Home' });
 
-  const baseMetadata = {
-    title: t('Metadata.title'),
-    description: t('Metadata.description'),
-  };
+    const baseMetadata = {
+        title: t('Metadata.title'),
+        description: t('Metadata.description'),
+    };
 
-  return {
-    ...baseMetadata,
-    openGraph: {
-      ...baseMetadata,
-      url: new URL(BASE_URL).toString(),
-    },
-    twitter: {
-      ...baseMetadata,
-      card: 'summary_large_image',
-    },
-  };
+    return {
+        ...baseMetadata,
+        openGraph: {
+            ...baseMetadata,
+            url: new URL(BASE_URL).toString(),
+        },
+        twitter: {
+            ...baseMetadata,
+            card: 'summary_large_image',
+        },
+    };
 }
 
 export default async function Page() {
-  // const { blogs } = await getBlogPostsCardMeta({
-  //   page: PAGE_INDEX_DEFAULT,
-  //   pageSize: RECENT_BLOGS_DEFAULT,
-  // });
+    // const { blogs } = await getBlogPostsCardMeta({
+    //   page: PAGE_INDEX_DEFAULT,
+    //   pageSize: RECENT_BLOGS_DEFAULT,
+    // });
 
-  const projects = getProjectsMetadata({
-    page: PAGE_INDEX_DEFAULT,
-    perPage: RECENT_PROJECTS_DEFAULT,
-  });
+    const projects = getProjectsMetadata({
+        page: PAGE_INDEX_DEFAULT,
+        perPage: RECENT_PROJECTS_DEFAULT,
+    });
 
-  return (
-    <>
-      <Intro />
-      <Socials />
-      {/* <RecentBlogs blogPosts={blogs} /> */}
-      <RecentProjects projectsMeta={projects} />
-      <Raindrop />
-      <NewsletterForm />
-    </>
-  );
+    return (
+        <>
+            <Intro />
+            <Socials />
+            {/* <RecentBlogs blogPosts={blogs} /> */}
+            <RecentProjects projectsMeta={projects} />
+            <Raindrop />
+            <NewsletterForm />
+        </>
+    );
 }
