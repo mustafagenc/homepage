@@ -52,7 +52,7 @@ importers:
         version: 1.1.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@t3-oss/env-nextjs':
         specifier: ^0.13.8
-        version: 0.13.8(typescript@5.8.3)(zod@3.25.67)
+        version: 0.13.8(typescript@5.8.3)(zod@3.25.71)
       '@tailwindcss/typography':
         specifier: ^0.5.16
         version: 0.5.16(tailwindcss@4.1.11)
@@ -138,8 +138,8 @@ importers:
         specifier: ^0.34.2
         version: 0.34.2
       sonner:
-        specifier: ^2.0.5
-        version: 2.0.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: ^2.0.6
+        version: 2.0.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       sugar-high:
         specifier: ^0.9.3
         version: 0.9.3
@@ -153,8 +153,8 @@ importers:
         specifier: ^10.0.5
         version: 10.0.5(react@19.1.0)
       zod:
-        specifier: ^3.25.67
-        version: 3.25.67
+        specifier: ^3.25.71
+        version: 3.25.71
     devDependencies:
       '@eslint/eslintrc':
         specifier: ^3.3.1
@@ -3843,8 +3843,8 @@ packages:
     resolution: {integrity: sha512-FoqMu0NCGBLCcAkS1qA+XJIQTR6/JHfQXl+uGteNCQ76T91DMUjPa9xfmeqMY3z80nLSg9yQmNjK0Px6RWsH/A==}
     engines: {node: '>=18'}
 
-  sonner@2.0.5:
-    resolution: {integrity: sha512-YwbHQO6cSso3HBXlbCkgrgzDNIhws14r4MO87Ofy+cV2X7ES4pOoAK3+veSmVTvqNx1BWUxlhPmZzP00Crk2aQ==}
+  sonner@2.0.6:
+    resolution: {integrity: sha512-yHFhk8T/DK3YxjFQXIrcHT1rGEeTLliVzWbO0xN8GberVun2RiBnxAjXAYpZrqwEVHBG9asI/Li8TAAhN9m59Q==}
     peerDependencies:
       react: ^18.0.0 || ^19.0.0 || ^19.0.0-rc
       react-dom: ^18.0.0 || ^19.0.0 || ^19.0.0-rc
@@ -4365,8 +4365,8 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
-  zod@3.25.67:
-    resolution: {integrity: sha512-idA2YXwpCdqUSKRCACDE6ItZD9TZzy3OZMtpfLoh6oPR47lipysRrJfjzMqFxQ3uJuUPyUeWe1r9vLH33xO/Qw==}
+  zod@3.25.71:
+    resolution: {integrity: sha512-BsBc/NPk7h8WsUWYWYL+BajcJPY8YhjelaWu2NMLuzgraKAz4Lb4/6K11g9jpuDetjMiqhZ6YaexFLOC0Ogi3Q==}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -4540,7 +4540,7 @@ snapshots:
       chalk: 4.1.2
       semver: 7.7.2
       unplugin: 1.16.1
-      zod: 3.25.67
+      zod: 3.25.71
 
   '@codecov/vite-plugin@1.9.1(vite@7.0.0(@types/node@24.0.10)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.8.0))':
     dependencies:
@@ -5473,17 +5473,17 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@t3-oss/env-core@0.13.8(typescript@5.8.3)(zod@3.25.67)':
+  '@t3-oss/env-core@0.13.8(typescript@5.8.3)(zod@3.25.71)':
     optionalDependencies:
       typescript: 5.8.3
-      zod: 3.25.67
+      zod: 3.25.71
 
-  '@t3-oss/env-nextjs@0.13.8(typescript@5.8.3)(zod@3.25.67)':
+  '@t3-oss/env-nextjs@0.13.8(typescript@5.8.3)(zod@3.25.71)':
     dependencies:
-      '@t3-oss/env-core': 0.13.8(typescript@5.8.3)(zod@3.25.67)
+      '@t3-oss/env-core': 0.13.8(typescript@5.8.3)(zod@3.25.71)
     optionalDependencies:
       typescript: 5.8.3
-      zod: 3.25.67
+      zod: 3.25.71
 
   '@tailwindcss/node@4.1.11':
     dependencies:
@@ -8436,7 +8436,7 @@ snapshots:
       mrmime: 2.0.1
       totalist: 3.0.1
 
-  sonner@2.0.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  sonner@2.0.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
@@ -9026,6 +9026,6 @@ snapshots:
 
   yocto-queue@0.1.0: {}
 
-  zod@3.25.67: {}
+  zod@3.25.71: {}
 
   zwitch@2.0.4: {}
